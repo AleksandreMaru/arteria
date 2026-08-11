@@ -1,0 +1,27 @@
+{
+  "slug": "svaneti-village-trail",
+  "featured": true,
+  "region": "svaneti",
+  "dates": ["2026-08-16"],
+  "meetingPoint": {
+    "ka": "მესტია, ცენტრალური მოედანი",
+    "en": "Mestia, central square"
+  },
+  "duration": { "ka": "5 საათი", "en": "5 hours" },
+  "languages": ["ka", "en"],
+  "guide": "Nika Tsulukidze",
+  "formUrl": "https://forms.google.com/example-tour-svaneti",
+  "title": {
+    "ka": "სვანეთის სოფლის ბილიკი",
+    "en": "Svaneti Village Trail"
+  },
+  "summary": {
+    "ka": "სვანური კულტურა, ციხე-სახლები და მთის ხედები ფეხით.",
+    "en": "Svan culture, tower houses, and mountain views on foot."
+  },
+  "body": {
+    "ka": "საშუალო სირთულის ბილიკი მესტიის შემოგონებით. საჭიროა კომფორტული ფეხსაცმელი და წყალი.",
+    "en": "A moderate trail around Mestia. Comfortable shoes and water are essential."
+  },
+  "heroImage": "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800&q=80"
+}

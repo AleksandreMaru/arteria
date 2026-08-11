@@ -1,0 +1,54 @@
+---
+import "../../styles/global.css";
+import type { Locale } from "../../lib/types";
+import { getUi } from "../../lib/i18n";
+import { buildAlternateLinks, pageTitle } from "../../lib/seo";
+import Header from "./Header.astro";
+import Footer from "./Footer.astro";
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+  currentPath: string;
+  ogImage?: string;
+}
+
+const {
+  locale,
+  title,
+  description,
+  currentPath,
+  ogImage = "/logo.svg",
+} = Astro.props;
+
+const ui = getUi(locale);
+const alternates = buildAlternateLinks(currentPath);
+const metaTitle = pageTitle(locale, title);
+const metaDescription = description ?? ui.site.tagline;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={metaDescription} />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="alternate" hreflang="ka" href={alternates.ka} />
+    <link rel="alternate" hreflang="en" href={alternates.en} />
+    <link rel="alternate" hreflang="x-default" href={alternates.ka} />
+    <meta property="og:title" content={metaTitle} />
+    <meta property="og:description" content={metaDescription} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:type" content="website" />
+    <title>{metaTitle}</title>
+  </head>
+  <body data-locale={locale}>
+    <Header locale={locale} currentPath={currentPath} />
+    <main class="mx-auto min-h-[60vh] max-w-7xl px-5 py-10 md:px-8 md:py-14">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>

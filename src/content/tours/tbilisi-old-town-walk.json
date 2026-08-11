@@ -1,0 +1,27 @@
+{
+  "slug": "tbilisi-old-town-walk",
+  "featured": true,
+  "region": "tbilisi",
+  "dates": ["2026-07-05", "2026-07-19", "2026-08-02"],
+  "meetingPoint": {
+    "ka": "თავისუფლების მოედანი, მეტროს გასასვლელთან",
+    "en": "Freedom Square, near the metro exit"
+  },
+  "duration": { "ka": "3 საათი", "en": "3 hours" },
+  "languages": ["ka", "en"],
+  "guide": "Salome Kiknadze",
+  "formUrl": "https://forms.google.com/example-tour-tbilisi",
+  "title": {
+    "ka": "ძველი თბილისის სასეირნეო",
+    "en": "Old Tbilisi Walking Tour"
+  },
+  "summary": {
+    "ka": "კლიშეების გარეშე — უბნები, ეზოები და ისტორიები, რომლებსაც გზაზე ვიპოვით.",
+    "en": "Beyond clichés — districts, courtyards, and stories we find along the way."
+  },
+  "body": {
+    "ka": "შევხვდებით თავისუფლების მოედანზე და ნელი ნაბიჯით გავივლით აბანოს უბნიდან სოლოლაკამდე. ფოკუსი — არქიტექტურაზე, ყოველდღიურ ცხოვრებაზე და ხედვაზე.",
+    "en": "We meet at Freedom Square and walk slowly from Abanotubani toward Sololaki. Focus on architecture, daily life, and perspective."
+  },
+  "heroImage": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80"
+}

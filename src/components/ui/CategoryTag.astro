@@ -1,0 +1,17 @@
+---
+import type { Locale } from "../../lib/types";
+
+interface Props {
+  locale: Locale;
+  label: string;
+}
+
+const { locale, label } = Astro.props;
+---
+
+<span
+  class="inline-block text-[11px] font-semibold uppercase tracking-[0.14em] text-accent"
+  lang={locale}
+>
+  {label}
+</span>

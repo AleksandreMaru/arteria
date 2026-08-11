@@ -1,0 +1,142 @@
+{
+  "site": {
+    "name": "ARTAREA ED",
+    "tagline": "კურსები, ტურები და შემოქმედებითი განათლება საქართველოში"
+  },
+  "nav": {
+    "courses": "კურსები",
+    "summerSchool": "საზაფხულო სკოლა",
+    "tours": "ტურები",
+    "stories": "ისტორიები",
+    "interviews": "ინტერვიუები",
+    "spotlight": "სპოთლაითი",
+    "events": "ღონისძიებები",
+    "about": "ჩვენ შესახებ",
+    "contact": "კონტაქტი",
+    "learnMore": "გაიგე მეტი"
+  },
+  "footer": {
+    "tagline": "შენს გზაზე გეხმარებით — კურსიდან ტურამდე.",
+    "follow": "გამოგვყევი",
+    "links": "ბმულები",
+    "copyright": "© {year} ARTAREA ED"
+  },
+  "home": {
+    "heroLabel": "საზაფხულო სკოლა 2026",
+    "upcoming": "მოახლოებით",
+    "featuredCourses": "კურსები",
+    "programs": "პროგრამები",
+    "stories": "ისტორიები",
+    "toursTeaser": "ტურები საქართველოში",
+    "viewAll": "ყველას ნახვა"
+  },
+  "courses": {
+    "title": "კურსები",
+    "subtitle": "იპოვე შენთვის შესაფერისი კურსი — დონე, დრო და ფორმატი ერთ ადგილას.",
+    "filters": "ფილტრები",
+    "level": "დონე",
+    "discipline": "მიმართულება",
+    "duration": "ხანგრძლივობა",
+    "schedule": "განრიგი",
+    "format": "ფორმატი",
+    "sort": "დალაგება",
+    "sortStartingSoon": "მალე იწყება",
+    "sortAlphabetical": "ანბანურად",
+    "noResults": "ამ ფილტრებით კურსი ვერ მოიძებნა.",
+    "instructor": "მასწავლებელი",
+    "startsAt": "იწყება",
+    "register": "რეგისტრაცია",
+    "learnMore": "გაიგე მეტი"
+  },
+  "summerSchool": {
+    "title": "საზაფხულო სკოლა",
+    "subtitle": "შემოქმედებითი ზაფხური ბავშვებისთვის თბილისის შემოგონებით.",
+    "ages": "ასაკი",
+    "location": "ლოკაცია",
+    "dates": "თარიღები",
+    "curriculum": "პროგრამა",
+    "dailyRhythm": "დღის რიტმი",
+    "faq": "ხშირი კითხვები",
+    "apply": "რეგისტრაცია"
+  },
+  "tours": {
+    "title": "ტურები",
+    "subtitle": "ქალაქისა და რეგიონის სასეირნეო ტურები მთელ საქართველოში.",
+    "region": "რეგიონი",
+    "allRegions": "ყველა",
+    "meetingPoint": "შეხვედრის ადგილი",
+    "duration": "ხანგრძლივობა",
+    "languages": "ენები",
+    "guide": "გიდი",
+    "register": "რეგისტრაცია"
+  },
+  "editorial": {
+    "interviewsTitle": "ინტერვიუები",
+    "interviewsSubtitle": "შემოქმედები, მასწავლებლები და სტუდენტები ჩვენს გარშემო.",
+    "spotlightTitle": "სპოთლაითი",
+    "spotlightSubtitle": "პროექტები, სტუდიოები და სამუშაოები, რომლებიც გვათრომინებს.",
+    "by": "ავტორი"
+  },
+  "events": {
+    "title": "ღონისძიებები",
+    "subtitle": "გახსნები, ლექციები და საზოგადოებრივი შეხვედრები.",
+    "venue": "ადგილი"
+  },
+  "about": {
+    "title": "ჩვენ შესახებ",
+    "subtitle": "ARTAREA ED — შემოქმედებითი განათლების სივრცე, სადაც გზაზე არ დაგტოვებთ."
+  },
+  "contact": {
+    "title": "კონტაქტი",
+    "subtitle": "დაგვიკავშირდი ან დარეგისტრირდი ფორმის მეშვეობით.",
+    "forms": "რეგისტრაციის ფორმები",
+    "social": "სოციალური ქსელები"
+  },
+  "levels": {
+    "beginner": "დამწყები",
+    "intermediate": "საშუალო",
+    "advanced": "მაღალი"
+  },
+  "durations": {
+    "4-weeks": "4 კვირა",
+    "6-weeks": "6 კვირა",
+    "8-weeks": "8 კვირა",
+    "weekend": "შაბათ-კვირა",
+    "intensive": "ინტენსიური"
+  },
+  "schedules": {
+    "weekday-morning": "დილის საათები",
+    "weekday-evening": "საღამოს საათები",
+    "weekend": "შაბათ-კვირა",
+    "flexible": "მოქნილი"
+  },
+  "formats": {
+    "in-person": "აუდიტორია",
+    "online": "ონლაინ",
+    "hybrid": "ჰიბრიდული"
+  },
+  "disciplines": {
+    "visual-art": "ვიზუალური ხელოვნება",
+    "design": "დიზაინი",
+    "photography": "ფოტოგრაფია",
+    "film": "კინო",
+    "music": "მუსიკა",
+    "craft": "ხელოსნობა"
+  },
+  "regions": {
+    "tbilisi": "თბილისი",
+    "kakheti": "კახეთი",
+    "svaneti": "სვანეთი",
+    "adjara": "აჭარა",
+    "imereti": "იმერეთი",
+    "mtskheta": "მცხეთა"
+  },
+  "categories": {
+    "course": "კურსი",
+    "tour": "ტური",
+    "event": "ღონისძიება",
+    "interview": "ინტერვიუ",
+    "spotlight": "სპოთლაითი",
+    "summerSchool": "საზაფხულო სკოლა"
+  }
+}

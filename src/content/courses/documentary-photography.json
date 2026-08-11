@@ -1,0 +1,25 @@
+{
+  "slug": "documentary-photography",
+  "featured": false,
+  "discipline": "photography",
+  "level": "intermediate",
+  "duration": "8-weeks",
+  "schedule": "weekday-evening",
+  "format": "in-person",
+  "formUrl": "https://forms.google.com/example-photo",
+  "title": {
+    "ka": "დოკუმენტური ფოტოგრაფია",
+    "en": "Documentary Photography"
+  },
+  "summary": {
+    "ka": "ქალაქიდან ადამიანზე — როგორ ვიპოვოთ ისტორია კადრში.",
+    "en": "From the city to the person — how to find a story in the frame."
+  },
+  "body": {
+    "ka": "პრაქტიკული გასვლები თბილისში და სტუდიო განხილვები. ფოკუსი — ხედვაზე, ეთიკაზე და პროექტის სტრუქტურაზე.",
+    "en": "Practical outings in Tbilisi and studio critiques. Focus on vision, ethics, and project structure."
+  },
+  "instructor": "Mariam Chkheidze",
+  "startsAt": "2026-09-22",
+  "heroImage": "https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&q=80"
+}

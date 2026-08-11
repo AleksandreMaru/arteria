@@ -1,0 +1,43 @@
+---
+import PageLayout from "../../components/layout/PageLayout.astro";
+import SectionHeader from "../../components/ui/SectionHeader.astro";
+import { getUi } from "../../lib/i18n";
+import { isLocale, localeStaticPaths } from "../../lib/routes";
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const { locale: localeParam } = Astro.params;
+if (!localeParam || !isLocale(localeParam)) {
+  return Astro.redirect("/ka/about");
+}
+const locale = localeParam;
+const ui = getUi(locale);
+const currentPath = Astro.url.pathname;
+
+const body =
+  locale === "ka"
+    ? [
+        "ARTAREA ED — შემოქმედებითი განათლების სივრცე, სადაც კურსები, ტურები და საზაფხულო სკოლა ერთ ეკოსისტემაში ერთიანდება.",
+        "ჩვენ გვჯერა, რომ სწავლა უნდა იყოს პირადი, მაგრამ არა იზოლირებული — ვეხმარებით იპოვო შენი რიტმი და გზა.",
+        "ჩვენი გუნდი — მასწავლებლები, გიდები და რედაქტორები — ერთი ხედვით მუშაობს: შექმნა, რომელიც გვერდით არ დაგტოვებს.",
+      ]
+    : [
+        "ARTAREA ED is a creative education space where courses, tours, and summer school form one ecosystem.",
+        "We believe learning should feel personal but not isolated — we help you find your rhythm and your path.",
+        "Our team of teachers, guides, and editors works with one vision: creation that stays with you.",
+      ];
+---
+
+<PageLayout
+  locale={locale}
+  title={ui.about.title}
+  description={ui.about.subtitle}
+  currentPath={currentPath}
+>
+  <SectionHeader title={ui.about.title} subtitle={ui.about.subtitle} />
+  <div class="prose-content max-w-3xl text-base text-muted">
+    {body.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+</PageLayout>

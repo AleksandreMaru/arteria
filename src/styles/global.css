@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Noto+Sans+Georgian:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #e6339e;
+  --color-text: #000000;
+  --color-muted: #6b6b6b;
+  --color-bg: #ffffff;
+  --color-bg-subtle: #fafafa;
+  --color-border: #e5e5e5;
+
+  --font-headline: "Space Grotesk", "Noto Sans Georgian", sans-serif;
+  --font-body-en: "Inter", sans-serif;
+  --font-body-ka: "Noto Sans Georgian", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+body[data-locale="ka"] {
+  font-family: var(--font-body-ka);
+}
+
+body[data-locale="en"] {
+  font-family: var(--font-body-en);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+.prose-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.75;
+}
+
+.prose-content p:last-child {
+  margin-bottom: 0;
+}

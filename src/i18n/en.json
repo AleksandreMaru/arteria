@@ -1,0 +1,142 @@
+{
+  "site": {
+    "name": "ARTAREA ED",
+    "tagline": "Courses, tours, and creative education across Georgia"
+  },
+  "nav": {
+    "courses": "Courses",
+    "summerSchool": "Summer School",
+    "tours": "Tours",
+    "stories": "Stories",
+    "interviews": "Interviews",
+    "spotlight": "Spotlight",
+    "events": "Events",
+    "about": "About",
+    "contact": "Contact",
+    "learnMore": "Learn more"
+  },
+  "footer": {
+    "tagline": "We look after your path — from courses to tours.",
+    "follow": "Follow us",
+    "links": "Links",
+    "copyright": "© {year} ARTAREA ED"
+  },
+  "home": {
+    "heroLabel": "Summer School 2026",
+    "upcoming": "Upcoming",
+    "featuredCourses": "Courses",
+    "programs": "Programs",
+    "stories": "Stories",
+    "toursTeaser": "Tours across Georgia",
+    "viewAll": "View all"
+  },
+  "courses": {
+    "title": "Courses",
+    "subtitle": "Find the right fit — level, schedule, and format in one place.",
+    "filters": "Filters",
+    "level": "Level",
+    "discipline": "Discipline",
+    "duration": "Duration",
+    "schedule": "Schedule",
+    "format": "Format",
+    "sort": "Sort",
+    "sortStartingSoon": "Starting soon",
+    "sortAlphabetical": "Alphabetical",
+    "noResults": "No courses match these filters.",
+    "instructor": "Instructor",
+    "startsAt": "Starts",
+    "register": "Register",
+    "learnMore": "Learn more"
+  },
+  "summerSchool": {
+    "title": "Summer School",
+    "subtitle": "A creative summer for children just outside Tbilisi.",
+    "ages": "Ages",
+    "location": "Location",
+    "dates": "Dates",
+    "curriculum": "Program",
+    "dailyRhythm": "Daily rhythm",
+    "faq": "FAQ",
+    "apply": "Apply"
+  },
+  "tours": {
+    "title": "Tours",
+    "subtitle": "City and regional walking tours across Georgia.",
+    "region": "Region",
+    "allRegions": "All",
+    "meetingPoint": "Meeting point",
+    "duration": "Duration",
+    "languages": "Languages",
+    "guide": "Guide",
+    "register": "Register"
+  },
+  "editorial": {
+    "interviewsTitle": "Interviews",
+    "interviewsSubtitle": "Creators, teachers, and students around us.",
+    "spotlightTitle": "Spotlight",
+    "spotlightSubtitle": "Projects, studios, and work that inspires us.",
+    "by": "By"
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Openings, talks, and community gatherings.",
+    "venue": "Venue"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "ARTAREA ED is a creative education space that stays with you on the way."
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Reach out or register through our forms.",
+    "forms": "Registration forms",
+    "social": "Social"
+  },
+  "levels": {
+    "beginner": "Beginner",
+    "intermediate": "Intermediate",
+    "advanced": "Advanced"
+  },
+  "durations": {
+    "4-weeks": "4 weeks",
+    "6-weeks": "6 weeks",
+    "8-weeks": "8 weeks",
+    "weekend": "Weekend",
+    "intensive": "Intensive"
+  },
+  "schedules": {
+    "weekday-morning": "Weekday mornings",
+    "weekday-evening": "Weekday evenings",
+    "weekend": "Weekends",
+    "flexible": "Flexible"
+  },
+  "formats": {
+    "in-person": "In person",
+    "online": "Online",
+    "hybrid": "Hybrid"
+  },
+  "disciplines": {
+    "visual-art": "Visual art",
+    "design": "Design",
+    "photography": "Photography",
+    "film": "Film",
+    "music": "Music",
+    "craft": "Craft"
+  },
+  "regions": {
+    "tbilisi": "Tbilisi",
+    "kakheti": "Kakheti",
+    "svaneti": "Svaneti",
+    "adjara": "Adjara",
+    "imereti": "Imereti",
+    "mtskheta": "Mtskheta"
+  },
+  "categories": {
+    "course": "Course",
+    "tour": "Tour",
+    "event": "Event",
+    "interview": "Interview",
+    "spotlight": "Spotlight",
+    "summerSchool": "Summer School"
+  }
+}

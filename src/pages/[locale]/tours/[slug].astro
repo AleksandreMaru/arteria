@@ -1,0 +1,82 @@
+---
+import PageLayout from "../../../components/layout/PageLayout.astro";
+import CategoryTag from "../../../components/ui/CategoryTag.astro";
+import FormCTA from "../../../components/ui/FormCTA.astro";
+import { getTour, getTours } from "../../../lib/content";
+import { formatDate, getLocalized, getUi } from "../../../lib/i18n";
+import { isLocale } from "../../../lib/routes";
+import { LOCALES } from "../../../lib/types";
+
+export function getStaticPaths() {
+  return LOCALES.flatMap((locale) =>
+    getTours().map((tour) => ({
+      params: { locale, slug: tour.slug },
+    })),
+  );
+}
+
+const { locale: localeParam, slug } = Astro.params;
+if (!localeParam || !isLocale(localeParam) || !slug) {
+  return Astro.redirect("/ka/tours");
+}
+const locale = localeParam;
+const tour = getTour(slug);
+if (!tour) {
+  return Astro.redirect(`/${locale}/tours`);
+}
+const ui = getUi(locale);
+const currentPath = Astro.url.pathname;
+---
+
+<PageLayout
+  locale={locale}
+  title={getLocalized(tour.title, locale)}
+  description={getLocalized(tour.summary, locale)}
+  currentPath={currentPath}
+  ogImage={tour.heroImage}
+>
+  <article>
+    {
+      tour.heroImage && (
+        <div class="mb-8 aspect-[21/9] overflow-hidden bg-bg-subtle">
+          <img src={tour.heroImage} alt="" class="h-full w-full object-cover" />
+        </div>
+      )
+    }
+    <CategoryTag locale={locale} label={ui.regions[tour.region]} />
+    <h1 class="mt-4 font-headline text-3xl font-semibold md:text-5xl">
+      {getLocalized(tour.title, locale)}
+    </h1>
+    <p class="mt-4 text-sm text-muted">
+      {ui.tours.duration}: {getLocalized(tour.duration, locale)} · {ui.tours.guide}:{" "}
+      {tour.guide}
+    </p>
+    <p class="mt-2 text-sm text-muted">
+      {ui.tours.meetingPoint}: {getLocalized(tour.meetingPoint, locale)}
+    </p>
+    <p class="mt-2 text-sm text-muted">
+      {ui.tours.languages}: {tour.languages.join(", ").toUpperCase()}
+    </p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      {
+        tour.dates.map((date) => (
+          <span class="border border-border px-3 py-1 text-sm">
+            {formatDate(date, locale)}
+          </span>
+        ))
+      }
+    </div>
+    <div class="prose-content mt-8 max-w-3xl text-base text-muted">
+      {
+        getLocalized(tour.body, locale)
+          .split("\n\n")
+          .map((paragraph) => <p>{paragraph}</p>)
+      }
+    </div>
+    <FormCTA
+      locale={locale}
+      formUrl={tour.formUrl}
+      label={ui.tours.register}
+    />
+  </article>
+</PageLayout>

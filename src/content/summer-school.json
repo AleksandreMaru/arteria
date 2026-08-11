@@ -1,0 +1,88 @@
+{
+  "year": 2026,
+  "ages": {
+    "ka": "7–14 წელი",
+    "en": "Ages 7–14"
+  },
+  "location": {
+    "ka": "თბილისის შემოგონება",
+    "en": "Just outside Tbilisi"
+  },
+  "dates": {
+    "ka": "15 ივნისი — 2 აგვისტო, 2026",
+    "en": "15 June — 2 August, 2026"
+  },
+  "formUrl": "https://forms.google.com/example-summer-school",
+  "heroImage": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80",
+  "intro": {
+    "ka": "შემოქმედებითი ზაფხული ბავშვებისთვის — სივრცე, სადაც თამაში, ხელოვნება და აღმოჩენა ერთად მიდის.",
+    "en": "A creative summer for children — a space where play, art, and discovery go together."
+  },
+  "curriculum": [
+    {
+      "title": { "ka": "ვიზუალური ექსპერიმენტები", "en": "Visual experiments" },
+      "description": {
+        "ka": "ფერწერა, კოლაჟი და მასალების აღმოჩენა ღია სივრცეში.",
+        "en": "Painting, collage, and material exploration in open air."
+      }
+    },
+    {
+      "title": { "ka": "ქალაქი და ბუნება", "en": "City and nature" },
+      "description": {
+        "ka": "მოკლე სასეირნეო გასვლები და ესკიზების წერა გარემოში.",
+        "en": "Short walks and sketching sessions in the landscape."
+      }
+    },
+    {
+      "title": { "ka": "საბოლოო პროექტი", "en": "Final project" },
+      "description": {
+        "ka": "თითოეული მონაწილე ამთავრებს პირად ნამუშევარს ოჯახისთვის გამოფენით.",
+        "en": "Each participant finishes a personal work shown to families."
+      }
+    }
+  ],
+  "dailyRhythm": [
+    {
+      "time": "10:00",
+      "activity": { "ka": "დილის წრე და გაცნობა", "en": "Morning circle and warm-up" }
+    },
+    {
+      "time": "10:30",
+      "activity": { "ka": "სტუდიო სესია", "en": "Studio session" }
+    },
+    {
+      "time": "13:00",
+      "activity": { "ka": "სადილი და დასვენება", "en": "Lunch and rest" }
+    },
+    {
+      "time": "14:00",
+      "activity": { "ka": "გარე აქტივობა ან პროექტი", "en": "Outdoor activity or project" }
+    },
+    {
+      "time": "16:30",
+      "activity": { "ka": "დღის დახურვა", "en": "End of day" }
+    }
+  ],
+  "faq": [
+    {
+      "question": {
+        "ka": "საჭიროა თუ არა წინასწარი გამოცდილება?",
+        "en": "Is prior experience required?"
+      },
+      "answer": {
+        "ka": "არა. პროგრამა გათვლილია სხვადასხვა დონის ბავშვებზე — ჩვენ ვეხმარებით თითოეულს საკუთარი რიტმით.",
+        "en": "No. The program welcomes different levels — we support each child at their own pace."
+      }
+    },
+    {
+      "question": {
+        "ka": "როგორ ხდება ტრანსპორტირება?",
+        "en": "How does transport work?"
+      },
+      "answer": {
+        "ka": "დეტალები გაეგზავნებათ რეგისტრაციის შემდეგ. ლოკაცია მოხერხებულად არის თბილისთან.",
+        "en": "Details are shared after registration. The location is conveniently close to Tbilisi."
+      }
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+---
+import type { Event } from "../../lib/schemas";
+import type { Locale } from "../../lib/types";
+import { formatDate, getLocalized, getUi, localePath } from "../../lib/i18n";
+import CategoryTag from "../ui/CategoryTag.astro";
+
+interface Props {
+  locale: Locale;
+  event: Event;
+}
+
+const { locale, event } = Astro.props;
+const ui = getUi(locale);
+const href = localePath(locale, `/events/${event.slug}`);
+---
+
+<article class="group border-t border-border py-6 first:border-t-0">
+  <a href={href} class="block">
+    <CategoryTag locale={locale} label={ui.categories.event} />
+    <h3 class="mt-3 font-headline text-xl font-semibold leading-snug group-hover:text-accent">
+      {getLocalized(event.title, locale)}
+    </h3>
+    <p class="mt-2 text-sm text-muted">
+      {formatDate(event.date, locale)} · {getLocalized(event.venue, locale)}
+    </p>
+    <p class="mt-3 line-clamp-2 text-sm text-muted">
+      {getLocalized(event.summary, locale)}
+    </p>
+  </a>
+</article>

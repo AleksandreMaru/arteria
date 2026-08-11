@@ -1,0 +1,43 @@
+---
+import PageLayout from "../../../components/layout/PageLayout.astro";
+import SectionHeader from "../../../components/ui/SectionHeader.astro";
+import TourFilters from "../../../components/filters/TourFilters.tsx";
+import { getTours } from "../../../lib/content";
+import { getUi, localePath } from "../../../lib/i18n";
+import { isLocale, localeStaticPaths } from "../../../lib/routes";
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const { locale: localeParam } = Astro.params;
+if (!localeParam || !isLocale(localeParam)) {
+  return Astro.redirect("/ka/tours");
+}
+const locale = localeParam;
+const ui = getUi(locale);
+const tours = getTours();
+const currentPath = Astro.url.pathname;
+const basePath = localePath(locale, "/tours");
+---
+
+<PageLayout
+  locale={locale}
+  title={ui.tours.title}
+  description={ui.tours.subtitle}
+  currentPath={currentPath}
+>
+  <SectionHeader title={ui.tours.title} subtitle={ui.tours.subtitle} />
+  <TourFilters
+    client:load
+    locale={locale}
+    tours={tours}
+    basePath={basePath}
+    labels={{
+      allRegions: ui.tours.allRegions,
+      regions: ui.regions,
+      noResults: ui.courses.noResults,
+      register: ui.tours.register,
+    }}
+  />
+</PageLayout>

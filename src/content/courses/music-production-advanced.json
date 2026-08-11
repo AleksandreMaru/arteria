@@ -1,0 +1,25 @@
+{
+  "slug": "music-production-advanced",
+  "featured": false,
+  "discipline": "music",
+  "level": "advanced",
+  "duration": "6-weeks",
+  "schedule": "flexible",
+  "format": "online",
+  "formUrl": "https://forms.google.com/example-music",
+  "title": {
+    "ka": "მუსიკის პროდაქშენი — გაღრმავებული",
+    "en": "Music Production — Advanced"
+  },
+  "summary": {
+    "ka": "საუნდის დიზაინი, მიქსი და მაქსიმიზაცია — ონლაინ, მოქნილი განრიგით.",
+    "en": "Sound design, mixing, and mastering — online with a flexible schedule."
+  },
+  "body": {
+    "ka": "განკუთვნილია მათთვის, ვისაც უკვე აქვს პროექტები და სურს პროფესიული დონის დახვეწა. ინდივიდუალური უკუკავშირი ყოველ კვირას.",
+    "en": "For those who already have projects and want professional-level refinement. Individual feedback every week."
+  },
+  "instructor": "Zura Maisuradze",
+  "startsAt": "2026-10-20",
+  "heroImage": "https://images.unsplash.com/photo-1511379938544-c1f69419868d?w=800&q=80"
+}

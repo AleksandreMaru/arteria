@@ -1,0 +1,82 @@
+---
+import type { Locale } from "../../lib/types";
+import { getUi, localePath } from "../../lib/i18n";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const ui = getUi(locale);
+const base = localePath(locale);
+const year = new Date().getFullYear();
+
+const footerLinks = [
+  { href: `${base}courses`, label: ui.nav.courses },
+  { href: `${base}summer-school`, label: ui.nav.summerSchool },
+  { href: `${base}tours`, label: ui.nav.tours },
+  { href: `${base}interviews`, label: ui.nav.interviews },
+  { href: `${base}spotlight`, label: ui.nav.spotlight },
+  { href: `${base}contact`, label: ui.nav.contact },
+];
+
+const social = [
+  { href: "https://instagram.com/artareaed", label: "Instagram" },
+  { href: "https://facebook.com/artareaed", label: "Facebook" },
+];
+---
+
+<footer class="mt-20 border-t border-border bg-bg-subtle">
+  <div class="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-3 md:px-8">
+    <div>
+      <img src="/logo.svg" alt="ARTAREA ED" class="mb-4 h-8 w-auto" />
+      <p class="max-w-xs text-sm leading-relaxed text-muted">{ui.footer.tagline}</p>
+    </div>
+
+    <div>
+      <h2 class="mb-4 text-xs font-semibold uppercase tracking-[0.14em]">
+        {ui.footer.links}
+      </h2>
+      <ul class="space-y-2">
+        {
+          footerLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-sm text-muted transition-colors hover:text-accent"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="mb-4 text-xs font-semibold uppercase tracking-[0.14em]">
+        {ui.footer.follow}
+      </h2>
+      <ul class="space-y-2">
+        {
+          social.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-sm text-muted transition-colors hover:text-accent"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-border py-6 text-center text-xs text-muted">
+    {ui.footer.copyright.replace("{year}", String(year))}
+  </div>
+</footer>

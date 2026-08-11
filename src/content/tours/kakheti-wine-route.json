@@ -1,0 +1,27 @@
+{
+  "slug": "kakheti-wine-route",
+  "featured": true,
+  "region": "kakheti",
+  "dates": ["2026-07-12", "2026-08-09"],
+  "meetingPoint": {
+    "ka": "ისანის ავტოსადგური, 08:30",
+    "en": "Isani bus station, 08:30"
+  },
+  "duration": { "ka": "სრული დღე", "en": "Full day" },
+  "languages": ["ka", "en", "ru"],
+  "guide": "Davit Lomidze",
+  "formUrl": "https://forms.google.com/example-tour-kakheti",
+  "title": {
+    "ka": "კახეთის ღვინის მარშრუტი",
+    "en": "Kakheti Wine Route"
+  },
+  "summary": {
+    "ka": "ქალაქიდან ვენახებამდე — ხედები, სტუმართმოყვარეობა და ადგილობრივი ისტორია.",
+    "en": "From town to vineyards — views, hospitality, and local history."
+  },
+  "body": {
+    "ka": "დღის ტური სიგნაღიდან ტყიბის მიმართულებით. ვინახავთ ტრადიციულ კეთებას და ვსაუბრობთ რეგიონის კულტურულ ფენებზე.",
+    "en": "A day trip toward Telavi through Sighnaghi. We visit traditional production and discuss the region's cultural layers."
+  },
+  "heroImage": "https://images.unsplash.com/photo-1506377247377-2becd15acfdf?w=800&q=80"
+}

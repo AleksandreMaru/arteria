@@ -1,0 +1,27 @@
+{
+  "slug": "batumi-architecture-walk",
+  "featured": false,
+  "region": "adjara",
+  "dates": ["2026-06-28", "2026-07-26"],
+  "meetingPoint": {
+    "ka": "ბათუმის ბულვარი, ზღვისპირა პარკი",
+    "en": "Batumi Boulevard, seaside park"
+  },
+  "duration": { "ka": "2.5 საათი", "en": "2.5 hours" },
+  "languages": ["ka", "en"],
+  "guide": "Elene Gogiberidze",
+  "formUrl": "https://forms.google.com/example-tour-batumi",
+  "title": {
+    "ka": "ბათუმის არქიტექტურული სასეირნეო",
+    "en": "Batumi Architecture Walk"
+  },
+  "summary": {
+    "ka": "მოდერნიზმიდან თანამედროვე ფასადებამდე — ზღვისპირა ქალაქის ფენები.",
+    "en": "From modernism to contemporary facades — layers of a seaside city."
+  },
+  "body": {
+    "ka": "ვსეირნობთ ბულვარზე და უკანასკნელ უბნებში, სადაც ქალაქი ყველაზე საინტერესოდ იცვლება.",
+    "en": "We walk the boulevard and back streets where the city changes most interestingly."
+  },
+  "heroImage": "https://images.unsplash.com/photo-1596484552834-6a58f850e134?w=800&q=80"
+}

@@ -1,0 +1,51 @@
+---
+import PageLayout from "../../components/layout/PageLayout.astro";
+import Hero from "../../components/home/Hero.astro";
+import UpcomingStrip from "../../components/home/UpcomingStrip.astro";
+import ProgramsRow from "../../components/home/ProgramsRow.astro";
+import StoriesSection from "../../components/home/StoriesSection.astro";
+import ToursTeaser from "../../components/home/ToursTeaser.astro";
+import CourseCard from "../../components/cards/CourseCard.astro";
+import Button from "../../components/ui/Button.astro";
+import { getFeaturedCourses } from "../../lib/content";
+import { getUi, localePath } from "../../lib/i18n";
+import { isLocale, localeStaticPaths } from "../../lib/routes";
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const { locale: localeParam } = Astro.params;
+if (!localeParam || !isLocale(localeParam)) {
+  return Astro.redirect("/ka/");
+}
+const locale = localeParam;
+const ui = getUi(locale);
+const featuredCourses = getFeaturedCourses().slice(0, 3);
+const currentPath = Astro.url.pathname;
+---
+
+<PageLayout locale={locale} currentPath={currentPath}>
+  <Hero locale={locale} />
+  <UpcomingStrip locale={locale} />
+  <section class="border-b border-border py-12 md:py-16">
+    <div class="mb-8 flex items-end justify-between gap-4">
+      <h2 class="font-headline text-2xl font-semibold md:text-3xl">
+        {ui.home.featuredCourses}
+      </h2>
+      <Button
+        href={localePath(locale, "/courses")}
+        variant="secondary"
+        class="hidden shrink-0 sm:inline-flex"
+      >
+        {ui.home.viewAll}
+      </Button>
+    </div>
+    <div class="grid gap-6 md:grid-cols-3">
+      {featuredCourses.map((course) => <CourseCard locale={locale} course={course} />)}
+    </div>
+  </section>
+  <ProgramsRow locale={locale} />
+  <StoriesSection locale={locale} />
+  <ToursTeaser locale={locale} />
+</PageLayout>

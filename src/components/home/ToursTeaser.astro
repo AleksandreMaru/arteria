@@ -1,0 +1,29 @@
+---
+import type { Locale } from "../../lib/types";
+import { getUi, localePath } from "../../lib/i18n";
+import { getFeaturedTours } from "../../lib/content";
+import TourCard from "../cards/TourCard.astro";
+import Button from "../ui/Button.astro";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const ui = getUi(locale);
+const tours = getFeaturedTours().slice(0, 3);
+---
+
+<section class="py-12 md:py-16">
+  <div class="mb-8 flex items-end justify-between gap-4">
+    <h2 class="font-headline text-2xl font-semibold md:text-3xl">
+      {ui.home.toursTeaser}
+    </h2>
+    <Button href={localePath(locale, "/tours")} variant="secondary" class="hidden sm:inline-flex">
+      {ui.home.viewAll}
+    </Button>
+  </div>
+  <div class="grid gap-6 md:grid-cols-3">
+    {tours.map((tour) => <TourCard locale={locale} tour={tour} />)}
+  </div>
+</section>

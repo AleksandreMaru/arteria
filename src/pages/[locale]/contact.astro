@@ -1,0 +1,79 @@
+---
+import PageLayout from "../../components/layout/PageLayout.astro";
+import SectionHeader from "../../components/ui/SectionHeader.astro";
+import Button from "../../components/ui/Button.astro";
+import { getCourses, getSummerSchool, getTours } from "../../lib/content";
+import { getLocalized, getUi } from "../../lib/i18n";
+import { isLocale, localeStaticPaths } from "../../lib/routes";
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const { locale: localeParam } = Astro.params;
+if (!localeParam || !isLocale(localeParam)) {
+  return Astro.redirect("/ka/contact");
+}
+const locale = localeParam;
+const ui = getUi(locale);
+const currentPath = Astro.url.pathname;
+const summerSchool = getSummerSchool();
+
+const formLinks = [
+  {
+    label: ui.nav.summerSchool,
+    url: summerSchool.formUrl,
+  },
+  ...getCourses().slice(0, 4).map((course) => ({
+    label: getLocalized(course.title, locale),
+    url: course.formUrl,
+  })),
+  ...getTours().slice(0, 3).map((tour) => ({
+    label: getLocalized(tour.title, locale),
+    url: tour.formUrl,
+  })),
+];
+
+const social = [
+  { href: "https://instagram.com/artareaed", label: "Instagram" },
+  { href: "https://facebook.com/artareaed", label: "Facebook" },
+];
+---
+
+<PageLayout
+  locale={locale}
+  title={ui.contact.title}
+  description={ui.contact.subtitle}
+  currentPath={currentPath}
+>
+  <SectionHeader title={ui.contact.title} subtitle={ui.contact.subtitle} />
+
+  <section class="mb-12">
+    <h2 class="mb-6 font-headline text-xl font-semibold">{ui.contact.forms}</h2>
+    <ul class="divide-y divide-border border-y border-border">
+      {
+        formLinks.map((link) => (
+          <li class="flex flex-col gap-3 py-4 sm:flex-row sm:items-center sm:justify-between">
+            <span class="font-medium">{link.label}</span>
+            <Button href={link.url} external variant="secondary">
+              {ui.courses.register}
+            </Button>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="mb-6 font-headline text-xl font-semibold">{ui.contact.social}</h2>
+    <div class="flex flex-wrap gap-4">
+      {
+        social.map((link) => (
+          <Button href={link.href} external variant="secondary">
+            {link.label}
+          </Button>
+        ))
+      }
+    </div>
+  </section>
+</PageLayout>

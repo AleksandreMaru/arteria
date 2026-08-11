@@ -1,0 +1,72 @@
+---
+import PageLayout from "../../../components/layout/PageLayout.astro";
+import CategoryTag from "../../../components/ui/CategoryTag.astro";
+import FormCTA from "../../../components/ui/FormCTA.astro";
+import { getCourse, getCourses } from "../../../lib/content";
+import { formatDate, getLocalized, getUi } from "../../../lib/i18n";
+import { isLocale } from "../../../lib/routes";
+import { LOCALES } from "../../../lib/types";
+
+export function getStaticPaths() {
+  return LOCALES.flatMap((locale) =>
+    getCourses().map((course) => ({
+      params: { locale, slug: course.slug },
+    })),
+  );
+}
+
+const { locale: localeParam, slug } = Astro.params;
+if (!localeParam || !isLocale(localeParam) || !slug) {
+  return Astro.redirect("/ka/courses");
+}
+const locale = localeParam;
+const course = getCourse(slug);
+if (!course) {
+  return Astro.redirect(`/${locale}/courses`);
+}
+const ui = getUi(locale);
+const currentPath = Astro.url.pathname;
+---
+
+<PageLayout
+  locale={locale}
+  title={getLocalized(course.title, locale)}
+  description={getLocalized(course.summary, locale)}
+  currentPath={currentPath}
+  ogImage={course.heroImage}
+>
+  <article>
+    {
+      course.heroImage && (
+        <div class="mb-8 aspect-[21/9] overflow-hidden bg-bg-subtle">
+          <img
+            src={course.heroImage}
+            alt=""
+            class="h-full w-full object-cover"
+          />
+        </div>
+      )
+    }
+    <CategoryTag locale={locale} label={ui.categories.course} />
+    <h1 class="mt-4 font-headline text-3xl font-semibold md:text-5xl">
+      {getLocalized(course.title, locale)}
+    </h1>
+    <p class="mt-4 text-sm text-muted">
+      {ui.levels[course.level]} · {ui.disciplines[course.discipline]} ·{" "}
+      {ui.durations[course.duration]} · {ui.schedules[course.schedule]} ·{" "}
+      {ui.formats[course.format]}
+    </p>
+    <p class="mt-2 text-sm text-muted">
+      {ui.courses.instructor}: {course.instructor} · {ui.courses.startsAt}:{" "}
+      {formatDate(course.startsAt, locale)}
+    </p>
+    <div class="prose-content mt-8 max-w-3xl text-base text-muted">
+      {
+        getLocalized(course.body, locale)
+          .split("\n\n")
+          .map((paragraph) => <p>{paragraph}</p>)
+      }
+    </div>
+    <FormCTA locale={locale} formUrl={course.formUrl} />
+  </article>
+</PageLayout>

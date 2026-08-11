@@ -1,0 +1,27 @@
+{
+  "slug": "mtskheta-heritage-walk",
+  "featured": false,
+  "region": "mtskheta",
+  "dates": ["2026-07-06", "2026-08-20"],
+  "meetingPoint": {
+    "ka": "მცხეთის ცენტრი, ტურისტული ინფორმაციის ცენტრი",
+    "en": "Mtskheta center, tourist information point"
+  },
+  "duration": { "ka": "4 საათი", "en": "4 hours" },
+  "languages": ["ka", "en"],
+  "guide": "Tamuna Javakhishvili",
+  "formUrl": "https://forms.google.com/example-tour-mtskheta",
+  "title": {
+    "ka": "მცხეთის მემკვიდრეობის ბილიკი",
+    "en": "Mtskheta Heritage Walk"
+  },
+  "summary": {
+    "ka": "უძველესი დედაქალაქი — ისტორია, ხედები და მშვიდი ტემპი.",
+    "en": "The ancient capital — history, views, and a calm pace."
+  },
+  "body": {
+    "ka": "ტური მოიცავს ძირითად ძეგლებს და ნაკლებად ცნობილ მარშრუტებს. თბილისიდან მარტივი დღიური გასვლაა.",
+    "en": "The tour covers main monuments and lesser-known paths. An easy day trip from Tbilisi."
+  },
+  "heroImage": "https://images.unsplash.com/photo-1609137144813-7d992133e920?w=800&q=80"
+}

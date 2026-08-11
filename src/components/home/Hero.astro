@@ -1,0 +1,40 @@
+---
+import type { Locale } from "../../lib/types";
+import { getLocalized, getUi, localePath } from "../../lib/i18n";
+import { getSummerSchool } from "../../lib/content";
+import Button from "../ui/Button.astro";
+import CategoryTag from "../ui/CategoryTag.astro";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const ui = getUi(locale);
+const summerSchool = getSummerSchool();
+const href = localePath(locale, "/summer-school");
+const image =
+  summerSchool.heroImage ??
+  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80";
+---
+
+<section class="grid gap-8 border-b border-border pb-12 md:grid-cols-2 md:items-end md:gap-12 md:pb-16">
+  <div class="order-2 md:order-1">
+    <CategoryTag locale={locale} label={ui.home.heroLabel} />
+    <h1 class="mt-4 font-headline text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+      {getLocalized(summerSchool.intro, locale)}
+    </h1>
+    <p class="mt-6 max-w-lg text-base leading-relaxed text-muted md:text-lg">
+      {ui.site.tagline}
+    </p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <Button href={href}>{ui.nav.learnMore}</Button>
+      <Button href={localePath(locale, "/courses")} variant="secondary">
+        {ui.nav.courses}
+      </Button>
+    </div>
+  </div>
+  <div class="order-1 aspect-[4/3] overflow-hidden bg-bg-subtle md:order-2 md:aspect-[5/4]">
+    <img src={image} alt="" class="h-full w-full object-cover" />
+  </div>
+</section>

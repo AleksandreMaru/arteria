@@ -1,0 +1,55 @@
+---
+import PageLayout from "../../../components/layout/PageLayout.astro";
+import SectionHeader from "../../../components/ui/SectionHeader.astro";
+import CourseFilters from "../../../components/filters/CourseFilters.tsx";
+import { getCourses } from "../../../lib/content";
+import { getUi, localePath } from "../../../lib/i18n";
+import { isLocale, localeStaticPaths } from "../../../lib/routes";
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const { locale: localeParam } = Astro.params;
+if (!localeParam || !isLocale(localeParam)) {
+  return Astro.redirect("/ka/courses");
+}
+const locale = localeParam;
+const ui = getUi(locale);
+const courses = getCourses();
+const currentPath = Astro.url.pathname;
+const basePath = localePath(locale, "/courses");
+---
+
+<PageLayout
+  locale={locale}
+  title={ui.courses.title}
+  description={ui.courses.subtitle}
+  currentPath={currentPath}
+>
+  <SectionHeader title={ui.courses.title} subtitle={ui.courses.subtitle} />
+  <CourseFilters
+    client:load
+    locale={locale}
+    courses={courses}
+    basePath={basePath}
+    labels={{
+      filters: ui.courses.filters,
+      level: ui.courses.level,
+      discipline: ui.courses.discipline,
+      duration: ui.courses.duration,
+      schedule: ui.courses.schedule,
+      format: ui.courses.format,
+      sort: ui.courses.sort,
+      sortStartingSoon: ui.courses.sortStartingSoon,
+      sortAlphabetical: ui.courses.sortAlphabetical,
+      noResults: ui.courses.noResults,
+      learnMore: ui.categories.course,
+      levels: ui.levels,
+      disciplines: ui.disciplines,
+      durations: ui.durations,
+      schedules: ui.schedules,
+      formats: ui.formats,
+    }}
+  />
+</PageLayout>
