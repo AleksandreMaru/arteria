@@ -27,7 +27,7 @@ Output is written to `dist/`.
 1. Connect this GitHub repository in Cloudflare Pages.
 2. **Build command:** `npm run build`
 3. **Build output directory:** `dist`
-4. **Node version:** `20` (set in Pages environment variables or use `.node-version`)
+4. **Node version:** `22.12.0` (set via `.node-version`; Astro 6 requires Node `>=22.12.0`)
 
 The root `/` redirects to `/ka/`.
 
