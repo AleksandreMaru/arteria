@@ -1,3 +1,5 @@
+# Cloudflare Pages config (static Astro site + functions/)
+# Build runs at the REPO ROOT — do not set Root directory to "main" in the dashboard.
 name = "arteria"
 compatibility_date = "2025-01-01"
 pages_build_output_dir = "dist"
