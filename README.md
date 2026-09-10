@@ -27,7 +27,9 @@ Output is written to `dist/`.
 1. Connect this GitHub repository in Cloudflare Pages.
 2. **Build command:** `npm run build`
 3. **Build output directory:** `dist`
-4. **Node version:** `22.12.0` (set via `.node-version`; Astro 6 requires Node `>=22.12.0`)
+4. **Node version:** `22.12.0` (Astro 6 requires Node `>=22.12.0`)
+   - Repo includes `.node-version` and `.nvmrc`
+   - In Cloudflare Pages → **Settings → Variables and secrets**, set **`NODE_VERSION`** = **`22.12.0`** for Production (and Preview). If an old `NODE_VERSION=20` exists, change or delete it — it overrides the repo files.
 
 ### Registration email (Resend)
 
