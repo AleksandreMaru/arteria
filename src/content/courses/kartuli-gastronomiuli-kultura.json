@@ -1,0 +1,177 @@
+{
+  "slug": "kartuli-gastronomiuli-kultura",
+  "featured": true,
+  "discipline": "gastronomy",
+  "level": "beginner",
+  "duration": "2-months",
+  "schedule": "weekday-evening",
+  "format": "in-person",
+  "formUrl": "https://forms.google.com/example-gastronomy",
+  "title": {
+    "ka": "ქართული გასტრონომიული კულტურა",
+    "en": "Georgian Gastronomic Culture"
+  },
+  "summary": {
+    "ka": "ქართული გასტრონომიის ენა, ისტორია, რეგიონული მრავალფეროვნება და რიტუალური მნიშვნელობები.",
+    "en": "The language, history, regional diversity, and ritual meanings of Georgian gastronomic culture."
+  },
+  "body": {
+    "ka": "კურსი აერთიანებს ქართული გასტრონომიული კულტურის ენას, ისტორიას, რეგიონულ მრავალფეროვნებასა და რიტუალურ მნიშვნელობებს.",
+    "en": "This course brings together the language, history, regional diversity, and ritual meanings of Georgian gastronomic culture."
+  },
+  "instructor": "დალი ცატავა",
+  "scheduleText": {
+    "ka": "ოთხშაბათი, 19:00",
+    "en": "Wednesday, 19:00"
+  },
+  "durationText": {
+    "ka": "2 თვე",
+    "en": "2 months"
+  },
+  "priceMonthly": 280,
+  "currency": "GEL",
+  "heroImage": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1200&q=80",
+  "curriculum": [
+    {
+      "week": 1,
+      "title": {
+        "ka": "ტერმინები და კულტურული მემკვიდრეობა",
+        "en": "Terms and cultural heritage"
+      },
+      "bullets": [
+        {
+          "ka": "მნიშვნელოვანი და აქტუალური ტერმინები: გასტრონომიული კულტურა, ტრაპეზი, გასტრონომია, კულინარია, ვეგანი, ვეგეტარიანელი, გურმე, გურმანი, ფასტფუდი, სლოუფუდი და სტრიტფუდი.",
+          "en": "Key terms: gastronomic culture, feast, gastronomy, culinary arts, vegan, vegetarian, gourmet, gourmand, fast food, slow food, and street food."
+        },
+        {
+          "ka": "კულინარია, როგორც არამატერიალური კულტურული ფასეულობა.",
+          "en": "Culinary practice as intangible cultural heritage."
+        },
+        {
+          "ka": "იუნესკოს არამატერიალური კულტურული მემკვიდრეობის ნუსხაში შეტანილი ქართული ნომინაციები.",
+          "en": "Georgian nominations on the UNESCO Intangible Cultural Heritage list."
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "title": {
+        "ka": "გასტრონომიული თბილისი",
+        "en": "Gastronomic Tbilisi"
+      },
+      "bullets": [
+        {
+          "ka": "საქართველოს არამატერიალურ ფასეულობათა ეროვნული ნუსხა და მისი დაცვის სისტემა.",
+          "en": "Georgia’s national intangible heritage list and its protection system."
+        },
+        {
+          "ka": "თბილისური „რეპერტუარი“ ქართულ მენიუში.",
+          "en": "The Tbilisi “repertoire” in the Georgian menu."
+        },
+        {
+          "ka": "თბილისის ბაზრები, დუქნის კულტურა და დუქანდარები.",
+          "en": "Tbilisi markets, dukani culture, and shopkeepers."
+        },
+        {
+          "ka": "ყავახანები და ყავანჩები.",
+          "en": "Coffee houses and coffee culture."
+        },
+        {
+          "ka": "თბილისის აბანოების გასტრონომია.",
+          "en": "Gastronomy of the Tbilisi baths."
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "title": {
+        "ka": "სამეგრელოსა და აფხაზეთის გასტრონომიული კულტურა",
+        "en": "Gastronomic culture of Samegrelo and Abkhazia"
+      },
+      "bullets": [
+        {
+          "ka": "„სამარგალო გალო შხვა რე“ — სამეგრელოსა და აფხაზეთის გასტრონომიული კულტურა.",
+          "en": "“Samargalo galo shkhva re” — gastronomic culture of Samegrelo and Abkhazia."
+        },
+        {
+          "ka": "მახორობა და დოხორე.",
+          "en": "Makhoroba and dokhore."
+        },
+        {
+          "ka": "„ვაშინერს“ — ტაბუ და აკრძალვა.",
+          "en": "“Vashiners” — taboo and prohibition."
+        },
+        {
+          "ka": "საახალწლო რიტუალები და „კუჩხა“ — თანაფა, სხვადასხვა რიტუალი და მათთან დაკავშირებული კერძები.",
+          "en": "New Year rituals and “kuchkha” — tanapa, related rituals, and associated dishes."
+        },
+        {
+          "ka": "აჯიკა და სუნელის კულტურა.",
+          "en": "Adjika and spice culture."
+        },
+        {
+          "ka": "„ჰამოს“ კულტურა და გასტრონომია.",
+          "en": "“Hamo” culture and gastronomy."
+        },
+        {
+          "ka": "აფხაზეთის „გემო“.",
+          "en": "The “taste” of Abkhazia."
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "title": {
+        "ka": "ქართული სამზარეულოს განვითარება და რეგიონული მრავალფეროვნება",
+        "en": "Development of Georgian cuisine and regional diversity"
+      },
+      "bullets": [
+        {
+          "ka": "ქართული გასტრონომიული კულტურის განვითარების გზები.",
+          "en": "Paths in the development of Georgian gastronomic culture."
+        },
+        {
+          "ka": "ქართული სამზარეულოს უმთავრესი მახასიათებლები.",
+          "en": "Main characteristics of Georgian cuisine."
+        },
+        {
+          "ka": "რეგიონული ქართული სამზარეულო და მისი თავისებურებები.",
+          "en": "Regional Georgian cuisine and its particularities."
+        },
+        {
+          "ka": "გულსართიანები — ხაჭაპური, მხლოვანები და რიტუალური დანიშნულების გულსართიანები.",
+          "en": "Filled breads — khachapuri, mkhlovani, and ritual filled breads."
+        },
+        {
+          "ka": "ხაჭაპური, როგორც ტრადიცია — მისი სახეები და მათთან დაკავშირებული ლეგენდები.",
+          "en": "Khachapuri as tradition — its forms and related legends."
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "title": {
+        "ka": "ქართული სუფრა, როგორც ხელოვნება",
+        "en": "The Georgian table as art"
+      },
+      "bullets": [
+        {
+          "ka": "ნადიმი, წვეულება და ლხინი.",
+          "en": "Feast, gathering, and celebration."
+        },
+        {
+          "ka": "სადღეგრძელო, თამადა და ტოლუმბაში.",
+          "en": "Toast, tamada, and toasting culture."
+        },
+        {
+          "ka": "ქელეხი, შესანდობარი და მისაგებებელი.",
+          "en": "Funeral feast, memorial offerings, and related customs."
+        },
+        {
+          "ka": "რიტუალური კერძები ქართულ გასტრონომიულ კულტურაში.",
+          "en": "Ritual dishes in Georgian gastronomic culture."
+        }
+      ]
+    }
+  ]
+}

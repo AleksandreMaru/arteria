@@ -9,8 +9,21 @@ export type LocalizedString = {
 };
 
 export type CourseLevel = "beginner" | "intermediate" | "advanced";
-export type CourseDuration = "4-weeks" | "6-weeks" | "8-weeks" | "weekend" | "intensive";
-export type CourseSchedule = "weekday-morning" | "weekday-evening" | "weekend" | "flexible";
+export type CourseDuration =
+  | "4-weeks"
+  | "6-weeks"
+  | "8-weeks"
+  | "10-weeks"
+  | "12-weeks"
+  | "2-months"
+  | "3-months"
+  | "weekend"
+  | "intensive";
+export type CourseSchedule =
+  | "weekday-morning"
+  | "weekday-evening"
+  | "weekend"
+  | "flexible";
 export type CourseFormat = "in-person" | "online" | "hybrid";
 export type CourseDiscipline =
   | "visual-art"
@@ -18,7 +31,10 @@ export type CourseDiscipline =
   | "photography"
   | "film"
   | "music"
-  | "craft";
+  | "craft"
+  | "storytelling"
+  | "culture"
+  | "gastronomy";
 
 export type TourRegion =
   | "tbilisi"

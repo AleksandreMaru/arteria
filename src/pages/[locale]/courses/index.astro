@@ -1,9 +1,9 @@
 ---
 import PageLayout from "../../../components/layout/PageLayout.astro";
 import SectionHeader from "../../../components/ui/SectionHeader.astro";
-import CourseFilters from "../../../components/filters/CourseFilters.tsx";
+import CourseCard from "../../../components/cards/CourseCard.astro";
 import { getCourses } from "../../../lib/content";
-import { getUi, localePath } from "../../../lib/i18n";
+import { getUi } from "../../../lib/i18n";
 import { isLocale, localeStaticPaths } from "../../../lib/routes";
 
 export function getStaticPaths() {
@@ -18,7 +18,6 @@ const locale = localeParam;
 const ui = getUi(locale);
 const courses = getCourses();
 const currentPath = Astro.url.pathname;
-const basePath = localePath(locale, "/courses");
 ---
 
 <PageLayout
@@ -28,28 +27,7 @@ const basePath = localePath(locale, "/courses");
   currentPath={currentPath}
 >
   <SectionHeader title={ui.courses.title} subtitle={ui.courses.subtitle} />
-  <CourseFilters
-    client:load
-    locale={locale}
-    courses={courses}
-    basePath={basePath}
-    labels={{
-      filters: ui.courses.filters,
-      level: ui.courses.level,
-      discipline: ui.courses.discipline,
-      duration: ui.courses.duration,
-      schedule: ui.courses.schedule,
-      format: ui.courses.format,
-      sort: ui.courses.sort,
-      sortStartingSoon: ui.courses.sortStartingSoon,
-      sortAlphabetical: ui.courses.sortAlphabetical,
-      noResults: ui.courses.noResults,
-      learnMore: ui.categories.course,
-      levels: ui.levels,
-      disciplines: ui.disciplines,
-      durations: ui.durations,
-      schedules: ui.schedules,
-      formats: ui.formats,
-    }}
-  />
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {courses.map((course) => <CourseCard locale={locale} course={course} />)}
+  </div>
 </PageLayout>

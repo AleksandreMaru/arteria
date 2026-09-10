@@ -27,6 +27,7 @@ const currentPath = Astro.url.pathname;
   description={getLocalized(school.intro, locale)}
   currentPath={currentPath}
   ogImage={school.heroImage}
+  registerCourseSlug="summer-school"
 >
   <SectionHeader
     title={ui.summerSchool.title}
@@ -123,7 +124,7 @@ const currentPath = Astro.url.pathname;
 
   <FormCTA
     locale={locale}
-    formUrl={school.formUrl}
+    courseSlug="summer-school"
     label={ui.summerSchool.apply}
   />
 </PageLayout>

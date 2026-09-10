@@ -1,7 +1,7 @@
 ---
 import type { Course } from "../../lib/schemas";
 import type { Locale } from "../../lib/types";
-import { formatDate, getLocalized, getUi, localePath } from "../../lib/i18n";
+import { getLocalized, getUi, localePath } from "../../lib/i18n";
 import CategoryTag from "../ui/CategoryTag.astro";
 
 interface Props {
@@ -12,6 +12,10 @@ interface Props {
 const { locale, course } = Astro.props;
 const ui = getUi(locale);
 const href = localePath(locale, `/courses/${course.slug}`);
+const price = ui.courses.pricePerMonth.replace(
+  "{amount}",
+  String(course.priceMonthly),
+);
 ---
 
 <article class="group border border-border bg-white p-5 transition-shadow hover:shadow-sm">
@@ -28,14 +32,18 @@ const href = localePath(locale, `/courses/${course.slug}`);
         </div>
       )
     }
-    <CategoryTag locale={locale} label={ui.categories.course} />
+    <CategoryTag locale={locale} label={ui.disciplines[course.discipline]} />
     <h3 class="mt-3 font-headline text-lg font-semibold leading-snug group-hover:text-accent">
       {getLocalized(course.title, locale)}
     </h3>
     <p class="mt-2 text-sm text-muted">
-      {ui.levels[course.level]} · {ui.durations[course.duration]} ·{" "}
-      {formatDate(course.startsAt, locale)}
+      {ui.courses.instructor}: {course.instructor}
     </p>
+    <p class="mt-1 text-sm text-muted">
+      {getLocalized(course.durationText, locale)} ·{" "}
+      {getLocalized(course.scheduleText, locale)}
+    </p>
+    <p class="mt-1 text-sm font-medium text-black">{price}</p>
     <p class="mt-3 line-clamp-2 text-sm leading-relaxed text-muted">
       {getLocalized(course.summary, locale)}
     </p>

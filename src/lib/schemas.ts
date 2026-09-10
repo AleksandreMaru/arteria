@@ -5,6 +5,16 @@ export const localizedStringSchema = z.object({
   en: z.string(),
 });
 
+export const curriculumSessionSchema = z.object({
+  week: z.number().optional(),
+  title: localizedStringSchema,
+  theory: localizedStringSchema.optional(),
+  practice: localizedStringSchema.optional(),
+  materials: localizedStringSchema.optional(),
+  homework: localizedStringSchema.optional(),
+  bullets: z.array(localizedStringSchema).optional(),
+});
+
 export const courseSchema = z.object({
   slug: z.string(),
   featured: z.boolean().default(false),
@@ -15,9 +25,22 @@ export const courseSchema = z.object({
     "film",
     "music",
     "craft",
+    "storytelling",
+    "culture",
+    "gastronomy",
   ]),
   level: z.enum(["beginner", "intermediate", "advanced"]),
-  duration: z.enum(["4-weeks", "6-weeks", "8-weeks", "weekend", "intensive"]),
+  duration: z.enum([
+    "4-weeks",
+    "6-weeks",
+    "8-weeks",
+    "10-weeks",
+    "12-weeks",
+    "2-months",
+    "3-months",
+    "weekend",
+    "intensive",
+  ]),
   schedule: z.enum([
     "weekday-morning",
     "weekday-evening",
@@ -30,7 +53,12 @@ export const courseSchema = z.object({
   summary: localizedStringSchema,
   body: localizedStringSchema,
   instructor: z.string(),
-  startsAt: z.string(),
+  startsAt: z.string().optional(),
+  scheduleText: localizedStringSchema,
+  durationText: localizedStringSchema,
+  priceMonthly: z.number(),
+  currency: z.string().default("GEL"),
+  curriculum: z.array(curriculumSessionSchema).default([]),
   heroImage: z.string().optional(),
 });
 
@@ -108,6 +136,7 @@ export const editorialSchema = z.object({
 });
 
 export type Course = z.infer<typeof courseSchema>;
+export type CurriculumSession = z.infer<typeof curriculumSessionSchema>;
 export type Tour = z.infer<typeof tourSchema>;
 export type Event = z.infer<typeof eventSchema>;
 export type SummerSchool = z.infer<typeof summerSchoolSchema>;

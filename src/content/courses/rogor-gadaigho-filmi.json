@@ -1,0 +1,108 @@
+{
+  "slug": "rogor-gadaigho-filmi",
+  "featured": true,
+  "discipline": "film",
+  "level": "beginner",
+  "duration": "3-months",
+  "schedule": "flexible",
+  "format": "in-person",
+  "formUrl": "https://forms.google.com/example-film-course",
+  "title": {
+    "ka": "როგორ გადავიღო ფილმი",
+    "en": "How to Shoot a Film"
+  },
+  "summary": {
+    "ka": "3-თვიანი კურსი კინორეჟისურისა და კინოწარმოების სრულ ციკლზე — იდეიდან მოკლემეტრაჟიან ფილმამდე.",
+    "en": "A 3-month course on film directing and the full production cycle — from idea to a finished short film."
+  },
+  "body": {
+    "ka": "კურსი მოიცავს კინორეჟისურის საფუძვლებსა და კინოწარმოების სრულ ციკლს. მონაწილეები შეისწავლიან, თუ როგორ აქციონ საკუთარი იდეა დასრულებულ მოკლემეტრაჟიან ფილმად — სცენარზე მუშაობიდან, გადასაღები მოედნის მართვიდან და მსახიობებთან ურთიერთობიდან საბოლოო მონტაჟამდე. კურსის მთავარი პრინციპია ვისწავლოთ არა მხოლოდ ამბის მოყოლა, არამედ მისი ვიზუალურად ჩვენება. სასწავლო პროგრამა აერთიანებს თეორიასა და პრაქტიკას, კურსის ბოლოს კი მონაწილეები პრაქტიკული დავალების სახით სმარტფონით მინი-ფილმს გადაიღებენ.",
+    "en": "This course covers the basics of film directing and the full production cycle. Participants learn how to turn their own idea into a finished short film — from script work, set management, and working with actors to final editing. The core principle is learning not only how to tell a story, but how to show it visually. The program combines theory and practice; at the end, participants shoot a mini-film on a smartphone as their practical project."
+  },
+  "instructor": "გიორგი თავართქილაძე",
+  "scheduleText": {
+    "ka": "განრიგი მალე გამოცხადდება",
+    "en": "Schedule to be announced"
+  },
+  "durationText": {
+    "ka": "3 თვე",
+    "en": "3 months"
+  },
+  "priceMonthly": 250,
+  "currency": "GEL",
+  "heroImage": "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&q=80",
+  "curriculum": [
+    {
+      "week": 1,
+      "title": {
+        "ka": "სცენარი და იდეის განვითარება",
+        "en": "Script and idea development"
+      },
+      "bullets": [
+        {
+          "ka": "პირველადი ჩანაფიქრი: იდეის მოკლემეტრაჟიან კინემატოგრაფიულ ამბად ქცევა და სცენარზე მუშაობის საფუძვლები.",
+          "en": "Initial concept: turning an idea into a short cinematic story and the basics of script work."
+        },
+        {
+          "ka": "ვიზუალური ენა: ტექსტური მასალის ეკრანულ გამოსახულებად გარდაქმნა — როგორ გავაცნობიეროთ ის, რასაც კადრით ვაჩვენებთ.",
+          "en": "Visual language: transforming text into screen image — becoming aware of what we show through the frame."
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "title": {
+        "ka": "მოსამზადებელი პერიოდი (Pre-production)",
+        "en": "Pre-production"
+      },
+      "bullets": [
+        {
+          "ka": "დაგეგმვა და ორგანიზება: ფილმის გადასაღებად საჭირო რესურსების, ლოკაციებისა და გუნდის მობილიზება.",
+          "en": "Planning and organization: mobilizing resources, locations, and crew needed to shoot the film."
+        },
+        {
+          "ka": "რეჟისორის ექსპლიკაცია: ფილმის ვიზუალური და კონცეპტუალური სტილის წინასწარი განსაზღვრა.",
+          "en": "Director’s treatment: defining the film’s visual and conceptual style in advance."
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "title": {
+        "ka": "გადასაღები მოედანი (Production)",
+        "en": "Production"
+      },
+      "bullets": [
+        {
+          "ka": "პროცესის და მოედნის მართვა: რეჟისორის უშუალო მუშაობა გადასაღებ მოედანზე, კადრირების პრინციპები, ხედი და კადრის სიღრმე.",
+          "en": "Process and set management: the director’s work on set, framing principles, shot size, and depth of field."
+        },
+        {
+          "ka": "მსახიობებთან და ჯგუფთან მუშაობა: კამერასთან, ოპერატორთან, ტექნიკურ ჯგუფთან და მსახიობებთან ურთიერთობის სპეციფიკა.",
+          "en": "Working with actors and crew: collaboration with camera, cinematographer, technical team, and performers."
+        },
+        {
+          "ka": "პრაქტიკა: კადრის, ხმის, დროისა და რიტმის აგების სავარჯიშოები.",
+          "en": "Practice: exercises in framing, sound, time, and rhythm."
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "title": {
+        "ka": "პოსტ-პროდაქშენი და ფინალური პროექტი (Post-production)",
+        "en": "Post-production and final project"
+      },
+      "bullets": [
+        {
+          "ka": "მონტაჟი: მონტაჟის პრინციპები და გადაღებული მასალისგან ერთიანი სტრუქტურის აწყობა.",
+          "en": "Editing: editing principles and building a unified structure from filmed material."
+        },
+        {
+          "ka": "დასკვნითი ეტაპი: ხმისა და ფერის კორექცია; სმარტფონით გადაღებული მინი-ფილმის საბოლოო სახემდე მიყვანა.",
+          "en": "Final stage: sound and color correction; finishing the smartphone mini-film."
+        }
+      ]
+    }
+  ]
+}

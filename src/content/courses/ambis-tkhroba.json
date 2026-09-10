@@ -1,0 +1,276 @@
+{
+  "slug": "ambis-tkhroba",
+  "featured": true,
+  "discipline": "storytelling",
+  "level": "beginner",
+  "duration": "12-weeks",
+  "schedule": "flexible",
+  "format": "in-person",
+  "formUrl": "https://forms.google.com/example-storytelling",
+  "title": {
+    "ka": "ამბის თხრობა",
+    "en": "Storytelling"
+  },
+  "summary": {
+    "ka": "12-კვირიანი პრაქტიკული კურსი — ამბის იდეიდან დასრულებულ ტექსტამდე და ფინალურ პრეზენტაციამდე.",
+    "en": "A 12-week practical course — from story idea to finished text and a final presentation."
+  },
+  "body": {
+    "ka": "12-კვირიანი პრაქტიკული კურსი მონაწილეებს დაეხმარება, ამბის იდეიდან დასრულებულ ტექსტამდე მივიდნენ და ფინალურ შეხვედრაზე საკუთარი ნამუშევარი წარადგინონ.",
+    "en": "This 12-week practical course helps participants move from a story idea to a finished text and present their work at the final session."
+  },
+  "instructor": "ქეთი დევდარიანი",
+  "scheduleText": {
+    "ka": "ოთხშაბათი, 17:00 / კვირა, 14:00",
+    "en": "Wednesday, 17:00 / Sunday, 14:00"
+  },
+  "durationText": {
+    "ka": "3 თვე (12 კვირა)",
+    "en": "3 months (12 weeks)"
+  },
+  "priceMonthly": 250,
+  "currency": "GEL",
+  "heroImage": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1200&q=80",
+  "curriculum": [
+    {
+      "week": 1,
+      "title": { "ka": "ამბის ძალა", "en": "The power of story" },
+      "theory": {
+        "ka": "რა არის ამბავი, რატომ უყვართ ადამიანებს ამბების მოსმენა და რა როლი აქვს ისტორიას კულტურასა და ყოველდღიურობაში.",
+        "en": "What a story is, why people love listening to stories, and the role of narrative in culture and everyday life."
+      },
+      "practice": {
+        "ka": "თითოეული მონაწილე ერთი წუთის განმავლობაში ჰყვება ბოლო კვირის ამბავს. თამაში „ამბის გაგრძელება“ — ერთი მონაწილე იწყებს, შემდეგი კი აგრძელებს.",
+        "en": "Each participant tells a one-minute story from the past week. Game: “Continue the story” — one starts, the next continues."
+      },
+      "materials": {
+        "ka": "დაფა, მარკერები, რვეულები და კალმები.",
+        "en": "Board, markers, notebooks, and pens."
+      },
+      "homework": {
+        "ka": "დღიურში ერთი დღის ამბის ჩაწერა და შემდეგ შეხვედრაზე წაკითხვა.",
+        "en": "Write one day’s story in a journal and read it at the next session."
+      }
+    },
+    {
+      "week": 2,
+      "title": { "ka": "პერსონაჟები", "en": "Characters" },
+      "theory": {
+        "ka": "პერსონაჟის მნიშვნელობა. როგორ ვაჩვენოთ გმირის მიზნები და დაბრკოლებები.",
+        "en": "Why characters matter. How to show a hero’s goals and obstacles."
+      },
+      "practice": {
+        "ka": "პერსონაჟის შექმნა სამი კითხვით: „ვინ არის?“, „რა უნდა?“ და „რა უშლის ხელს?“. მონაწილეები ხატავენ საკუთარ პერსონაჟს და სამი სიტყვით აღწერენ.",
+        "en": "Build a character with three questions: Who are they? What do they want? What stands in the way? Participants draw their character and describe them in three words."
+      },
+      "materials": {
+        "ka": "ქაღალდები, ფლომასტრები და ფანქრები.",
+        "en": "Paper, markers, and pencils."
+      },
+      "homework": {
+        "ka": "პერსონაჟის გამოგონება, რომელსაც განსაკუთრებული სურვილი ან მიზანი აქვს.",
+        "en": "Invent a character with a strong desire or goal."
+      }
+    },
+    {
+      "week": 3,
+      "title": { "ka": "კონფლიქტი", "en": "Conflict" },
+      "theory": {
+        "ka": "კონფლიქტი, როგორც სიუჟეტის მამოძრავებელი ძალა.",
+        "en": "Conflict as the driving force of plot."
+      },
+      "practice": {
+        "ka": "ჯგუფური დისკუსია საყვარელ ფილმებში მთავარი კონფლიქტის აღმოსაჩენად. თამაში „კონფლიქტის ამოცნობა“ — მოცემულ სიტუაციაში პრობლემის პოვნა.",
+        "en": "Group discussion of main conflicts in favorite films. Game: “Spot the conflict” in a given situation."
+      },
+      "materials": {
+        "ka": "დაფა და მარკერები.",
+        "en": "Board and markers."
+      },
+      "homework": {
+        "ka": "მოკლე ამბის დაწერა პერსონაჟზე, რომელსაც დაბრკოლება აქვს.",
+        "en": "Write a short story about a character facing an obstacle."
+      }
+    },
+    {
+      "week": 4,
+      "title": { "ka": "სიუჟეტის სტრუქტურა I", "en": "Plot structure I" },
+      "theory": {
+        "ka": "დასაწყისი, შუა ნაწილი და დასასრული.",
+        "en": "Beginning, middle, and end."
+      },
+      "practice": {
+        "ka": "ფრაგმენტებად დაყოფილი ამბის სწორად აწყობა. ჯგუფური დავალება — რამდენიმე მოცემულობისგან ამბის შექმნა.",
+        "en": "Reorder a fragmented story correctly. Group task: build a story from given prompts."
+      },
+      "materials": {
+        "ka": "წინასწარ მომზადებული ტექსტის ფრაგმენტები.",
+        "en": "Prepared text fragments."
+      },
+      "homework": {
+        "ka": "საკუთარი ამბის სქემის შექმნა 5-7 წინადადებით.",
+        "en": "Outline your own story in 5–7 sentences."
+      }
+    },
+    {
+      "week": 5,
+      "title": { "ka": "სიუჟეტის სტრუქტურა II", "en": "Plot structure II" },
+      "theory": {
+        "ka": "სიუჟეტის განვითარება, კულმინაცია და გმირის მოგზაურობის მარტივი მოდელი.",
+        "en": "Plot development, climax, and a simple hero’s journey model."
+      },
+      "practice": {
+        "ka": "სიუჟეტის რუკის შევსება. გმირის მარშრუტისა და პრობლემების რუკის შექმნა.",
+        "en": "Fill in a plot map. Map the hero’s route and problems."
+      },
+      "materials": {
+        "ka": "სქემები და ქაღალდები.",
+        "en": "Diagrams and paper."
+      },
+      "homework": {
+        "ka": "ამბის დაწერა, რომელშიც გმირი რთულ გადაწყვეტილებას იღებს.",
+        "en": "Write a story in which the hero makes a hard decision."
+      }
+    },
+    {
+      "week": 6,
+      "title": { "ka": "დიალოგი", "en": "Dialogue" },
+      "theory": {
+        "ka": "რეალური და მხატვრული დიალოგის განსხვავება.",
+        "en": "The difference between real and literary dialogue."
+      },
+      "practice": {
+        "ka": "წყვილებში მოკლე დიალოგის დაწერა. დიალოგური სცენის წაკითხვა და როლური გათამაშება.",
+        "en": "Write a short dialogue in pairs. Read and role-play the scene."
+      },
+      "materials": {
+        "ka": "რვეულები და კალმები.",
+        "en": "Notebooks and pens."
+      },
+      "homework": {
+        "ka": "1-2 გვერდიანი ამბის დაწერა, რომელშიც დიალოგი მთავარ როლს ასრულებს.",
+        "en": "Write a 1–2 page story where dialogue plays the main role."
+      }
+    },
+    {
+      "week": 7,
+      "title": { "ka": "გარემო და ატმოსფერო", "en": "Setting and atmosphere" },
+      "theory": {
+        "ka": "როგორ ვაჩვენოთ სივრცე და ატმოსფერო ხუთი შეგრძნების გამოყენებით.",
+        "en": "How to show space and atmosphere using the five senses."
+      },
+      "practice": {
+        "ka": "ნაცნობი ადგილის აღწერა მხოლოდ სუნის, ფერის ან ხმის გამოყენებით. ტექსტების ჯგუფში წაკითხვა და მათ მიერ შექმნილი განწყობის განხილვა.",
+        "en": "Describe a familiar place using only smell, color, or sound. Read in group and discuss the mood created."
+      },
+      "materials": {
+        "ka": "რვეულები და ფლომასტრები.",
+        "en": "Notebooks and markers."
+      },
+      "homework": {
+        "ka": "სცენის შექმნა, რომელშიც გარემო გმირის ემოციას გამოხატავს.",
+        "en": "Write a scene where the setting expresses the hero’s emotion."
+      }
+    },
+    {
+      "week": 8,
+      "title": { "ka": "ემოცია და მეტაფორა", "en": "Emotion and metaphor" },
+      "theory": {
+        "ka": "ემოციის როლი ისტორიაში. მეტაფორებისა და სიმბოლოების გამოყენება.",
+        "en": "The role of emotion in story. Using metaphors and symbols."
+      },
+      "practice": {
+        "ka": "ერთი და იმავე ამბის მოყოლა სამ განსხვავებულ ემოციაში — მხიარულად, სევდიანად და დრამატულად. მეტაფორების ძიება ყოველდღიურ გარემოში.",
+        "en": "Tell the same story in three emotions — joyful, sad, and dramatic. Hunt for metaphors in everyday surroundings."
+      },
+      "materials": {
+        "ka": "რვეულები და კალმები.",
+        "en": "Notebooks and pens."
+      },
+      "homework": {
+        "ka": "ამბის დაწერა, რომელშიც მინიმუმ ერთი მეტაფორაა გამოყენებული.",
+        "en": "Write a story that uses at least one metaphor."
+      }
+    },
+    {
+      "week": 9,
+      "title": { "ka": "პერსპექტივა და მთხრობელი", "en": "Perspective and narrator" },
+      "theory": {
+        "ka": "პირველი და მესამე პირი. სანდო და არასანდო მთხრობელი.",
+        "en": "First and third person. Reliable and unreliable narrators."
+      },
+      "practice": {
+        "ka": "ერთი და იმავე ამბის ჯერ პირველი, შემდეგ კი მესამე პირით მოყოლა. არასანდო მთხრობელის მაგალითის შექმნა.",
+        "en": "Tell the same story first in first person, then third. Create an unreliable-narrator example."
+      },
+      "materials": {
+        "ka": "დაფა და რვეულები.",
+        "en": "Board and notebooks."
+      },
+      "homework": {
+        "ka": "საკუთარი ამბის სხვა პერსპექტივით გადაწერა.",
+        "en": "Rewrite your story from another perspective."
+      }
+    },
+    {
+      "week": 10,
+      "title": { "ka": "იუმორი და დრამა", "en": "Humor and drama" },
+      "theory": {
+        "ka": "როგორ ვიმუშაოთ განსხვავებულ ტონალობაზე.",
+        "en": "How to work with different tonalities."
+      },
+      "practice": {
+        "ka": "ერთი ამბის ორი ვერსიის შექმნა — იუმორისტული და დრამატული. ჯგუფი აფასებს, რომელი ვერსია უფრო მოქმედებს.",
+        "en": "Create two versions of one story — humorous and dramatic. The group discusses which lands stronger."
+      },
+      "materials": {
+        "ka": "მოკლე ტექსტები და ვიდეოფრაგმენტები.",
+        "en": "Short texts and video clips."
+      },
+      "homework": {
+        "ka": "1-2 გვერდიანი ამბის დაწერა იუმორით ან დრამატული ტონით.",
+        "en": "Write a 1–2 page story in a humorous or dramatic tone."
+      }
+    },
+    {
+      "week": 11,
+      "title": { "ka": "ამბის საბოლოო ფორმა", "en": "Final form of the story" },
+      "theory": {
+        "ka": "რედაქტირების მნიშვნელობა და ტექსტის ზედმეტი დეტალებისგან გაწმენდა.",
+        "en": "Why editing matters and how to clear excess detail from a text."
+      },
+      "practice": {
+        "ka": "მონაწილეები ერთმანეთის ტექსტებს კითხულობენ და რჩევებს უზიარებენ.",
+        "en": "Participants read each other’s texts and share feedback."
+      },
+      "materials": {
+        "ka": "დაბეჭდილი ტექსტები და კალმები.",
+        "en": "Printed texts and pens."
+      },
+      "homework": {
+        "ka": "საკუთარი ამბის დასრულება პრეზენტაციისთვის.",
+        "en": "Finish your story for the presentation."
+      }
+    },
+    {
+      "week": 12,
+      "title": { "ka": "ფინალური პრეზენტაცია", "en": "Final presentation" },
+      "theory": {
+        "ka": "საჯარო გამოსვლის ტექნიკა — ხმა, ტონი, პაუზა და ჟესტი.",
+        "en": "Public speaking technique — voice, tone, pause, and gesture."
+      },
+      "practice": {
+        "ka": "ხმისა და რიტმის სავარჯიშოები. თითოეული მონაწილე საკუთარ ამბავს წარადგენს.",
+        "en": "Voice and rhythm exercises. Each participant presents their story."
+      },
+      "materials": {
+        "ka": "პატარა სცენა და ტელეფონი ან კამერა ჩასაწერად.",
+        "en": "A small stage and a phone or camera for recording."
+      },
+      "homework": {
+        "ka": "წერილობითი ტექსტის ან აუდიოჩანაწერის მომზადება თემაზე: „რას ნიშნავს ჩემთვის ამბის მოყოლა?“",
+        "en": "Prepare a written text or audio recording on: “What does storytelling mean to me?”"
+      }
+    }
+  ]
+}

@@ -1,10 +1,8 @@
 ---
 import PageLayout from "../../components/layout/PageLayout.astro";
 import Hero from "../../components/home/Hero.astro";
-import UpcomingStrip from "../../components/home/UpcomingStrip.astro";
-import ProgramsRow from "../../components/home/ProgramsRow.astro";
-import StoriesSection from "../../components/home/StoriesSection.astro";
-import ToursTeaser from "../../components/home/ToursTeaser.astro";
+import TrustStrip from "../../components/home/TrustStrip.astro";
+import SummerSchoolBand from "../../components/home/SummerSchoolBand.astro";
 import CourseCard from "../../components/cards/CourseCard.astro";
 import Button from "../../components/ui/Button.astro";
 import { getFeaturedCourses } from "../../lib/content";
@@ -21,13 +19,12 @@ if (!localeParam || !isLocale(localeParam)) {
 }
 const locale = localeParam;
 const ui = getUi(locale);
-const featuredCourses = getFeaturedCourses().slice(0, 3);
+const featuredCourses = getFeaturedCourses();
 const currentPath = Astro.url.pathname;
 ---
 
 <PageLayout locale={locale} currentPath={currentPath}>
   <Hero locale={locale} />
-  <UpcomingStrip locale={locale} />
   <section class="border-b border-border py-12 md:py-16">
     <div class="mb-8 flex items-end justify-between gap-4">
       <h2 class="font-headline text-2xl font-semibold md:text-3xl">
@@ -41,11 +38,14 @@ const currentPath = Astro.url.pathname;
         {ui.home.viewAll}
       </Button>
     </div>
-    <div class="grid gap-6 md:grid-cols-3">
-      {featuredCourses.map((course) => <CourseCard locale={locale} course={course} />)}
+    <div class="grid gap-6 md:grid-cols-2">
+      {
+        featuredCourses.map((course) => (
+          <CourseCard locale={locale} course={course} />
+        ))
+      }
     </div>
   </section>
-  <ProgramsRow locale={locale} />
-  <StoriesSection locale={locale} />
-  <ToursTeaser locale={locale} />
+  <TrustStrip locale={locale} />
+  <SummerSchoolBand locale={locale} />
 </PageLayout>

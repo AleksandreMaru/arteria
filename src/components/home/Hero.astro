@@ -1,7 +1,7 @@
 ---
 import type { Locale } from "../../lib/types";
 import { getLocalized, getUi, localePath } from "../../lib/i18n";
-import { getSummerSchool } from "../../lib/content";
+import { getFeaturedCourses } from "../../lib/content";
 import Button from "../ui/Button.astro";
 import CategoryTag from "../ui/CategoryTag.astro";
 
@@ -11,30 +11,60 @@ interface Props {
 
 const { locale } = Astro.props;
 const ui = getUi(locale);
-const summerSchool = getSummerSchool();
-const href = localePath(locale, "/summer-school");
-const image =
-  summerSchool.heroImage ??
-  "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1400&q=80";
+const courses = getFeaturedCourses();
+const coursesHref = localePath(locale, "/courses");
+const summerHref = localePath(locale, "/summer-school");
 ---
 
-<section class="grid gap-8 border-b border-border pb-12 md:grid-cols-2 md:items-end md:gap-12 md:pb-16">
-  <div class="order-2 md:order-1">
-    <CategoryTag locale={locale} label={ui.home.heroLabel} />
-    <h1 class="mt-4 font-headline text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-      {getLocalized(summerSchool.intro, locale)}
+<section class="grid gap-10 border-b border-border pb-12 md:grid-cols-2 md:items-start md:gap-14 md:pb-16">
+  <div>
+    <CategoryTag locale={locale} label={ui.home.heroEyebrow} />
+    <h1 class="mt-4 font-headline text-4xl font-semibold leading-[1.1] tracking-tight md:text-6xl">
+      {ui.home.heroTitle}
     </h1>
-    <p class="mt-6 max-w-lg text-base leading-relaxed text-muted md:text-lg">
-      {ui.site.tagline}
+    <p class="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
+      {ui.home.heroLead}
     </p>
     <div class="mt-8 flex flex-wrap gap-4">
-      <Button href={href}>{ui.nav.learnMore}</Button>
-      <Button href={localePath(locale, "/courses")} variant="secondary">
-        {ui.nav.courses}
+      <Button href={coursesHref} size="lg">{ui.home.heroCta}</Button>
+      <Button href={summerHref} variant="secondary" size="lg">
+        {ui.home.heroSecondary}
       </Button>
     </div>
   </div>
-  <div class="order-1 aspect-[4/3] overflow-hidden bg-bg-subtle md:order-2 md:aspect-[5/4]">
-    <img src={image} alt="" class="h-full w-full object-cover" />
+
+  <div class="border border-border bg-bg-subtle">
+    <div class="border-b border-border px-5 py-4">
+      <p class="text-xs font-semibold uppercase tracking-[0.14em] text-muted">
+        {ui.home.nowRunning}
+      </p>
+    </div>
+    <ul class="divide-y divide-border">
+      {
+        courses.map((course) => (
+          <li>
+            <a
+              href={localePath(locale, `/courses/${course.slug}`)}
+              class="group flex items-start justify-between gap-4 px-5 py-4 transition-colors hover:bg-white"
+            >
+              <div class="min-w-0">
+                <p class="font-headline text-lg font-semibold leading-snug group-hover:text-accent">
+                  {getLocalized(course.title, locale)}
+                </p>
+                <p class="mt-1 text-sm text-muted">
+                  {course.instructor} · {getLocalized(course.durationText, locale)}
+                </p>
+              </div>
+              <span
+                class="mt-1 shrink-0 text-accent transition-transform group-hover:translate-x-1"
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
   </div>
 </section>

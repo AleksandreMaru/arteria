@@ -1,0 +1,79 @@
+{
+  "slug": "tbilisologia",
+  "featured": true,
+  "discipline": "culture",
+  "level": "beginner",
+  "duration": "10-weeks",
+  "schedule": "weekday-evening",
+  "format": "in-person",
+  "formUrl": "https://forms.google.com/example-tbilisologia",
+  "title": {
+    "ka": "თბილისოლოგია",
+    "en": "Tbilisology"
+  },
+  "summary": {
+    "ka": "თბილისი — ისტორია, ტრადიციები, არქიტექტურა, ხელოვნება და ყოველდღიური კულტურა.",
+    "en": "Tbilisi through history, traditions, architecture, art, and everyday culture."
+  },
+  "body": {
+    "ka": "კურსი თბილისს მისი ისტორიის, ტრადიციების, არქიტექტურის, ხელოვნებისა და ყოველდღიური კულტურის სხვადასხვა პერსპექტივიდან გაგაცნობთ.",
+    "en": "This course introduces Tbilisi from multiple perspectives: history, traditions, architecture, art, and everyday culture."
+  },
+  "instructor": "ცირა ელისაშვილი",
+  "scheduleText": {
+    "ka": "პარასკევი, 19:00",
+    "en": "Friday, 19:00"
+  },
+  "durationText": {
+    "ka": "10 შეხვედრა",
+    "en": "10 sessions"
+  },
+  "priceMonthly": 250,
+  "currency": "GEL",
+  "heroImage": "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=80",
+  "curriculum": [
+    {
+      "week": 1,
+      "title": { "ka": "თბილისის ისტორია", "en": "History of Tbilisi" }
+    },
+    {
+      "week": 2,
+      "title": { "ka": "თბილისური ტრადიციები", "en": "Tbilisi traditions" }
+    },
+    {
+      "week": 3,
+      "title": { "ka": "თბილისური ამბები", "en": "Tbilisi stories" }
+    },
+    {
+      "week": 4,
+      "title": { "ka": "თბილისის არქიტექტურა", "en": "Architecture of Tbilisi" }
+    },
+    {
+      "week": 5,
+      "title": {
+        "ka": "თბილისის სადარბაზოების მხატვრობა",
+        "en": "Entrance hall painting in Tbilisi"
+      }
+    },
+    {
+      "week": 6,
+      "title": { "ka": "ფიროსმანი და თბილისი", "en": "Pirosmani and Tbilisi" }
+    },
+    {
+      "week": 7,
+      "title": { "ka": "თბილისელი მეცენატები", "en": "Patrons of Tbilisi" }
+    },
+    {
+      "week": 8,
+      "title": { "ka": "თბილისური რეკლამა", "en": "Tbilisi advertising" }
+    },
+    {
+      "week": 9,
+      "title": { "ka": "თბილისის კოლექციები", "en": "Collections of Tbilisi" }
+    },
+    {
+      "week": 10,
+      "title": { "ka": "ტურისტული მარშრუტი", "en": "Tourist route" }
+    }
+  ]
+}

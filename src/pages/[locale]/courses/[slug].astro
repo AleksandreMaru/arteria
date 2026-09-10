@@ -26,6 +26,10 @@ if (!course) {
 }
 const ui = getUi(locale);
 const currentPath = Astro.url.pathname;
+const price = ui.courses.pricePerMonth.replace(
+  "{amount}",
+  String(course.priceMonthly),
+);
 ---
 
 <PageLayout
@@ -34,6 +38,7 @@ const currentPath = Astro.url.pathname;
   description={getLocalized(course.summary, locale)}
   currentPath={currentPath}
   ogImage={course.heroImage}
+  registerCourseSlug={course.slug}
 >
   <article>
     {
@@ -47,26 +52,127 @@ const currentPath = Astro.url.pathname;
         </div>
       )
     }
-    <CategoryTag locale={locale} label={ui.categories.course} />
+    <CategoryTag locale={locale} label={ui.disciplines[course.discipline]} />
     <h1 class="mt-4 font-headline text-3xl font-semibold md:text-5xl">
       {getLocalized(course.title, locale)}
     </h1>
     <p class="mt-4 text-sm text-muted">
-      {ui.levels[course.level]} · {ui.disciplines[course.discipline]} ·{" "}
-      {ui.durations[course.duration]} · {ui.schedules[course.schedule]} ·{" "}
-      {ui.formats[course.format]}
+      {ui.courses.instructor}: {course.instructor}
     </p>
-    <p class="mt-2 text-sm text-muted">
-      {ui.courses.instructor}: {course.instructor} · {ui.courses.startsAt}:{" "}
-      {formatDate(course.startsAt, locale)}
-    </p>
-    <div class="prose-content mt-8 max-w-3xl text-base text-muted">
-      {
-        getLocalized(course.body, locale)
-          .split("\n\n")
-          .map((paragraph) => <p>{paragraph}</p>)
-      }
-    </div>
-    <FormCTA locale={locale} formUrl={course.formUrl} />
+
+    <dl class="mt-8 grid gap-4 border-y border-border py-6 sm:grid-cols-2 md:grid-cols-4">
+      <div>
+        <dt class="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+          {ui.courses.duration}
+        </dt>
+        <dd class="mt-2 text-sm">{getLocalized(course.durationText, locale)}</dd>
+      </div>
+      <div>
+        <dt class="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+          {ui.courses.schedule}
+        </dt>
+        <dd class="mt-2 text-sm">{getLocalized(course.scheduleText, locale)}</dd>
+      </div>
+      <div>
+        <dt class="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+          {ui.courses.price}
+        </dt>
+        <dd class="mt-2 text-sm">{price}</dd>
+      </div>
+      <div>
+        <dt class="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+          {ui.courses.format}
+        </dt>
+        <dd class="mt-2 text-sm">{ui.formats[course.format]}</dd>
+      </div>
+    </dl>
+
+    {
+      course.startsAt && (
+        <p class="mt-4 text-sm text-muted">
+          {ui.courses.startsAt}: {formatDate(course.startsAt, locale)}
+        </p>
+      )
+    }
+
+    <section class="mt-10 max-w-3xl">
+      <h2 class="font-headline text-xl font-semibold">{ui.courses.about}</h2>
+      <div class="prose-content mt-4 text-base text-muted">
+        {
+          getLocalized(course.body, locale)
+            .split("\n\n")
+            .map((paragraph) => <p>{paragraph}</p>)
+        }
+      </div>
+    </section>
+
+    {
+      course.curriculum.length > 0 && (
+        <section class="mt-12">
+          <h2 class="font-headline text-2xl font-semibold">
+            {ui.courses.curriculum}
+          </h2>
+          <div class="mt-6 divide-y divide-border border-y border-border">
+            {course.curriculum.map((session) => (
+              <details class="group py-5">
+                <summary class="cursor-pointer list-none font-headline text-lg font-semibold marker:content-none group-open:text-accent">
+                  <span class="flex items-start gap-3">
+                    {session.week != null && (
+                      <span class="mt-0.5 shrink-0 text-sm font-medium text-accent">
+                        {session.week}.
+                      </span>
+                    )}
+                    <span>{getLocalized(session.title, locale)}</span>
+                  </span>
+                </summary>
+                <div class="mt-4 max-w-3xl space-y-4 pl-6 text-sm leading-relaxed text-muted md:pl-8">
+                  {session.theory && (
+                    <p>
+                      <span class="font-medium text-black">
+                        {ui.courses.theory}:
+                      </span>{" "}
+                      {getLocalized(session.theory, locale)}
+                    </p>
+                  )}
+                  {session.practice && (
+                    <p>
+                      <span class="font-medium text-black">
+                        {ui.courses.practice}:
+                      </span>{" "}
+                      {getLocalized(session.practice, locale)}
+                    </p>
+                  )}
+                  {session.materials && (
+                    <p>
+                      <span class="font-medium text-black">
+                        {ui.courses.materials}:
+                      </span>{" "}
+                      {getLocalized(session.materials, locale)}
+                    </p>
+                  )}
+                  {session.homework && (
+                    <p>
+                      <span class="font-medium text-black">
+                        {ui.courses.homework}:
+                      </span>{" "}
+                      {getLocalized(session.homework, locale)}
+                    </p>
+                  )}
+                  {session.bullets && session.bullets.length > 0 && (
+                    <ul class="list-disc space-y-2 pl-5">
+                      {session.bullets.map((bullet) => (
+                        <li>{getLocalized(bullet, locale)}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </details>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <FormCTA locale={locale} courseSlug={course.slug} />
   </article>
 </PageLayout>

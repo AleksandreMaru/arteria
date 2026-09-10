@@ -1,10 +1,12 @@
 ---
 import "../../styles/global.css";
 import type { Locale } from "../../lib/types";
-import { getUi } from "../../lib/i18n";
+import { getLocalized, getUi, localePath } from "../../lib/i18n";
 import { buildAlternateLinks, pageTitle } from "../../lib/seo";
+import { getCourses } from "../../lib/content";
 import Header from "./Header.astro";
 import Footer from "./Footer.astro";
+import RegistrationModal from "../register/RegistrationModal.tsx";
 
 interface Props {
   locale: Locale;
@@ -12,6 +14,7 @@ interface Props {
   description?: string;
   currentPath: string;
   ogImage?: string;
+  registerCourseSlug?: string;
 }
 
 const {
@@ -20,12 +23,26 @@ const {
   description,
   currentPath,
   ogImage = "/logo.svg",
+  registerCourseSlug = "",
 } = Astro.props;
 
 const ui = getUi(locale);
 const alternates = buildAlternateLinks(currentPath);
 const metaTitle = pageTitle(locale, title);
 const metaDescription = description ?? ui.site.tagline;
+
+const courseOptions = [
+  ...getCourses().map((course) => ({
+    slug: course.slug,
+    title: getLocalized(course.title, locale),
+  })),
+  {
+    slug: "summer-school",
+    title: ui.register.summerSchoolOption,
+  },
+];
+
+const registerLabels = ui.register;
 ---
 
 <!doctype html>
@@ -50,5 +67,13 @@ const metaDescription = description ?? ui.site.tagline;
       <slot />
     </main>
     <Footer locale={locale} />
+    <RegistrationModal
+      client:load
+      locale={locale}
+      labels={registerLabels}
+      courses={courseOptions}
+      termsHref={localePath(locale, "/about")}
+      initialCourseSlug={registerCourseSlug}
+    />
   </body>
 </html>

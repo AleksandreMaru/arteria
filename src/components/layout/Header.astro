@@ -2,7 +2,6 @@
 import type { Locale } from "../../lib/types";
 import { getUi, localePath } from "../../lib/i18n";
 import LangSwitcher from "../ui/LangSwitcher.astro";
-import Button from "../ui/Button.astro";
 
 interface Props {
   locale: Locale;
@@ -18,72 +17,42 @@ const links = [
   { href: `${base}summer-school`, label: ui.nav.summerSchool },
   { href: `${base}tours`, label: ui.nav.tours },
   { href: `${base}about`, label: ui.nav.about },
-];
-
-const storyLinks = [
-  { href: `${base}interviews`, label: ui.nav.interviews },
-  { href: `${base}spotlight`, label: ui.nav.spotlight },
-  { href: `${base}events`, label: ui.nav.events },
+  { href: `${base}contact`, label: ui.nav.contact },
 ];
 ---
 
 <header class="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur-sm">
-  <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-4 md:px-8">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-5 md:px-8 md:py-6">
     <a href={base} class="shrink-0" aria-label="ARTAREA ED">
-      <img src="/logo.svg" alt="ARTAREA ED" class="h-8 w-auto md:h-9" />
+      <img src="/logo.svg" alt="ARTAREA ED" class="h-10 w-auto md:h-12" />
     </a>
 
-    <nav class="hidden items-center gap-8 lg:flex" aria-label="Main">
+    <nav class="hidden items-center gap-10 lg:flex" aria-label="Main">
       {
-        links.slice(0, 3).map((link) => (
+        links.slice(0, 4).map((link) => (
           <a
             href={link.href}
-            class="text-sm font-medium transition-colors hover:text-accent"
+            class="font-headline text-lg font-semibold tracking-tight transition-colors hover:text-accent"
           >
             {link.label}
           </a>
         ))
       }
-      <div class="group relative">
-        <button
-          type="button"
-          class="text-sm font-medium transition-colors hover:text-accent"
-          aria-haspopup="true"
-        >
-          {ui.nav.stories}
-        </button>
-        <div
-          class="invisible absolute left-0 top-full z-50 min-w-[180px] border border-border bg-white py-2 opacity-0 shadow-sm transition-all group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100"
-        >
-          {
-            storyLinks.map((link) => (
-              <a
-                href={link.href}
-                class="block px-4 py-2 text-sm transition-colors hover:bg-bg-subtle hover:text-accent"
-              >
-                {link.label}
-              </a>
-            ))
-          }
-        </div>
-      </div>
-      <a
-        href={`${base}about`}
-        class="text-sm font-medium transition-colors hover:text-accent"
-      >
-        {ui.nav.about}
-      </a>
     </nav>
 
     <div class="flex items-center gap-4 md:gap-6">
       <LangSwitcher locale={locale} currentPath={currentPath} />
-      <Button href={`${base}courses`} class="hidden sm:inline-flex">
-        {ui.nav.learnMore}
-      </Button>
+      <button
+        type="button"
+        data-open-register
+        class="hidden min-h-12 items-center justify-center bg-accent px-7 py-3.5 text-base font-medium text-white transition-colors hover:bg-black sm:inline-flex"
+      >
+        {ui.courses.register}
+      </button>
       <button
         type="button"
         id="mobile-menu-btn"
-        class="inline-flex h-10 w-10 items-center justify-center border border-border lg:hidden"
+        class="inline-flex h-12 w-12 items-center justify-center border border-border lg:hidden"
         aria-label="Open menu"
         aria-expanded="false"
       >
@@ -100,30 +69,31 @@ const storyLinks = [
     class="hidden border-t border-border bg-white lg:hidden"
     aria-label="Mobile"
   >
-    <div class="mx-auto flex max-w-7xl flex-col px-5 py-4 md:px-8">
+    <div class="mx-auto flex max-w-7xl flex-col px-5 py-5 md:px-8">
       {
-        [...links, ...storyLinks, { href: `${base}contact`, label: ui.nav.contact }].map(
-          (link) => (
-            <a
-              href={link.href}
-              class="border-b border-border py-3 text-sm font-medium last:border-b-0"
-            >
-              {link.label}
-            </a>
-          ),
-        )
+        links.map((link) => (
+          <a
+            href={link.href}
+            class="border-b border-border py-3.5 font-headline text-lg font-semibold last:border-b-0"
+          >
+            {link.label}
+          </a>
+        ))
       }
-      <a
-        href={`${base}courses`}
-        class="mt-4 inline-flex items-center justify-center bg-accent px-5 py-3 text-sm font-medium text-white"
+      <button
+        type="button"
+        data-open-register
+        class="mt-5 inline-flex min-h-12 items-center justify-center bg-accent px-7 py-3.5 text-base font-medium text-white"
       >
-        {ui.nav.learnMore}
-      </a>
+        {ui.courses.register}
+      </button>
     </div>
   </nav>
 </header>
 
 <script>
+  import { openRegisterModal } from "../../lib/register";
+
   const btn = document.getElementById("mobile-menu-btn");
   const menu = document.getElementById("mobile-menu");
 
@@ -132,4 +102,16 @@ const storyLinks = [
     menu?.classList.toggle("hidden", isOpen);
     btn.setAttribute("aria-expanded", String(!isOpen));
   });
+
+  function bindRegisterButtons() {
+    document.querySelectorAll<HTMLElement>("[data-open-register]").forEach((el) => {
+      if (el.dataset.bound === "1") return;
+      el.dataset.bound = "1";
+      el.addEventListener("click", () => {
+        openRegisterModal(el.dataset.openRegister || undefined);
+      });
+    });
+  }
+
+  bindRegisterButtons();
 </script>

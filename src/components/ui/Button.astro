@@ -3,6 +3,7 @@ interface Props {
   href?: string;
   external?: boolean;
   variant?: "primary" | "secondary";
+  size?: "md" | "lg";
   class?: string;
 }
 
@@ -10,17 +11,22 @@ const {
   href,
   external = false,
   variant = "primary",
+  size = "md",
   class: className = "",
 } = Astro.props;
 
 const base =
-  "inline-flex items-center justify-center px-5 py-2.5 text-sm font-medium transition-colors";
+  "inline-flex items-center justify-center font-medium transition-colors";
+const sizes = {
+  md: "min-h-10 px-5 py-2.5 text-sm",
+  lg: "min-h-12 px-7 py-3.5 text-base",
+};
 const variants = {
   primary: "bg-accent text-white hover:bg-black",
   secondary:
     "border border-black bg-transparent text-black hover:bg-black hover:text-white",
 };
-const classes = `${base} ${variants[variant]} ${className}`;
+const classes = `${base} ${sizes[size]} ${variants[variant]} ${className}`;
 ---
 
 {

@@ -22,17 +22,39 @@
     "copyright": "© {year} ARTAREA ED"
   },
   "home": {
-    "heroLabel": "Summer School 2026",
-    "upcoming": "Upcoming",
+    "heroEyebrow": "Courses 2026",
+    "heroTitle": "Learn to make it",
+    "heroLead": "Film, storytelling, Tbilisology, and gastronomy — 2–3 month courses in Tbilisi, from 250 GEL per month.",
+    "heroCta": "See the courses",
+    "heroSecondary": "Summer School",
+    "nowRunning": "Now running",
     "featuredCourses": "Courses",
+    "viewAll": "View all",
+    "trustTitle": "Why ARTAREA ED",
+    "trust": [
+      {
+        "title": "Practicing teachers",
+        "text": "Courses are led by people who make things themselves — film, text, culture, gastronomy."
+      },
+      {
+        "title": "Small groups",
+        "text": "Personal feedback and real progress — not a lecture stream."
+      },
+      {
+        "title": "Something in hand",
+        "text": "A text, a film, city knowledge, or table craft — you leave with real experience."
+      }
+    ],
+    "summerBandEyebrow": "Summer School 2026",
+    "summerBandCta": "Learn more",
     "programs": "Programs",
+    "upcoming": "Upcoming",
     "stories": "Stories",
-    "toursTeaser": "Tours across Georgia",
-    "viewAll": "View all"
+    "toursTeaser": "Tours across Georgia"
   },
   "courses": {
     "title": "Courses",
-    "subtitle": "Find the right fit — level, schedule, and format in one place.",
+    "subtitle": "Find the right course — instructors, schedule, and program in one place.",
     "filters": "Filters",
     "level": "Level",
     "discipline": "Discipline",
@@ -46,7 +68,15 @@
     "instructor": "Instructor",
     "startsAt": "Starts",
     "register": "Register",
-    "learnMore": "Learn more"
+    "learnMore": "Learn more",
+    "price": "Price",
+    "pricePerMonth": "{amount} GEL / month",
+    "curriculum": "Course plan",
+    "theory": "Theory",
+    "practice": "Practice",
+    "materials": "Materials",
+    "homework": "Homework",
+    "about": "About the course"
   },
   "summerSchool": {
     "title": "Summer School",
@@ -84,13 +114,50 @@
   },
   "about": {
     "title": "About",
-    "subtitle": "ARTAREA ED is a creative education space that stays with you on the way."
+    "subtitle": "A space where knowledge becomes inspiration, culture becomes discovery, and learning becomes experience."
   },
   "contact": {
     "title": "Contact",
     "subtitle": "Reach out or register through our forms.",
     "forms": "Registration forms",
     "social": "Social"
+  },
+  "register": {
+    "title": "Registration",
+    "close": "Close",
+    "personal": "Personal details",
+    "courseGroup": "Course",
+    "scheduling": "Call back",
+    "fullName": "Full name",
+    "dob": "Date of birth",
+    "dobPlaceholder": "DD / MM / YYYY",
+    "course": "Course",
+    "coursePlaceholder": "Choose a course",
+    "phone": "Phone",
+    "email": "Email",
+    "facebook": "Facebook link",
+    "facebookHint": "Paste a profile or page URL",
+    "about": "About you",
+    "aboutHint": "Why do you want this course? Tell us briefly.",
+    "callWhen": "When should we call you?",
+    "slots": {
+      "11-14": "11:00 - 14:00",
+      "14-17": "14:00 - 17:00",
+      "17-20": "17:00 - 20:00"
+    },
+    "termsPrefix": "I agree to the",
+    "termsLink": "terms and conditions",
+    "optional": "optional",
+    "submit": "Register",
+    "submitting": "Sending…",
+    "successTitle": "Sent",
+    "successBody": "We'll contact you soon in your preferred time window.",
+    "errorGeneric": "Something went wrong. Try again or contact us directly.",
+    "errorRequired": "Please fill in all required fields.",
+    "errorEmail": "Enter a valid email.",
+    "errorDob": "Use the format DD/MM/YYYY.",
+    "errorTerms": "Please agree to the terms and conditions.",
+    "summerSchoolOption": "Summer School"
   },
   "levels": {
     "beginner": "Beginner",
@@ -101,6 +168,10 @@
     "4-weeks": "4 weeks",
     "6-weeks": "6 weeks",
     "8-weeks": "8 weeks",
+    "10-weeks": "10 weeks",
+    "12-weeks": "12 weeks",
+    "2-months": "2 months",
+    "3-months": "3 months",
     "weekend": "Weekend",
     "intensive": "Intensive"
   },
@@ -121,7 +192,10 @@
     "photography": "Photography",
     "film": "Film",
     "music": "Music",
-    "craft": "Craft"
+    "craft": "Craft",
+    "storytelling": "Storytelling",
+    "culture": "Culture",
+    "gastronomy": "Gastronomy"
   },
   "regions": {
     "tbilisi": "Tbilisi",

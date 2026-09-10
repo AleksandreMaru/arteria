@@ -4,22 +4,38 @@ import { getUi } from "../../lib/i18n";
 
 interface Props {
   locale: Locale;
-  formUrl: string;
+  courseSlug?: string;
   label?: string;
 }
 
-const { locale, formUrl, label } = Astro.props;
+const { locale, courseSlug = "", label } = Astro.props;
 const ui = getUi(locale);
 const text = label ?? ui.courses.register;
 ---
 
 <div class="mt-12 border-t border-border pt-10">
-  <a
-    href={formUrl}
-    target="_blank"
-    rel="noopener noreferrer"
-    class="inline-flex items-center justify-center bg-accent px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-black"
+  <button
+    type="button"
+    data-open-register={courseSlug}
+    class="inline-flex min-h-12 items-center justify-center bg-accent px-8 py-3 text-sm font-medium text-white transition-colors hover:bg-black"
   >
     {text}
-  </a>
+  </button>
 </div>
+
+<script>
+  import { openRegisterModal } from "../../lib/register";
+
+  function bindRegisterButtons() {
+    document.querySelectorAll<HTMLElement>("[data-open-register]").forEach((el) => {
+      if (el.dataset.bound === "1") return;
+      el.dataset.bound = "1";
+      el.addEventListener("click", () => {
+        openRegisterModal(el.dataset.openRegister || undefined);
+      });
+    });
+  }
+
+  bindRegisterButtons();
+  document.addEventListener("astro:page-load", bindRegisterButtons);
+</script>

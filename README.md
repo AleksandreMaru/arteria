@@ -29,6 +29,22 @@ Output is written to `dist/`.
 3. **Build output directory:** `dist`
 4. **Node version:** `22.12.0` (set via `.node-version`; Astro 6 requires Node `>=22.12.0`)
 
+### Registration email (Resend)
+
+The registration modal posts to `functions/api/register.ts` (Cloudflare Pages Function), which emails you via [Resend](https://resend.com).
+
+In Cloudflare Pages → **Settings → Environment variables**, add:
+
+| Name | Value |
+|------|--------|
+| `RESEND_API_KEY` | your Resend API key |
+| `REGISTER_TO_EMAIL` | inbox that should receive leads |
+| `REGISTER_FROM_EMAIL` | optional, e.g. `ARTAREA ED <hello@yourdomain.com>` after domain verify |
+
+Until these are set, the form shows a clear “not configured” error.
+
+Local UI: `npm run dev` opens the modal. The API only runs on Cloudflare (or `npx wrangler pages dev dist` after build).
+
 The root `/` redirects to `/ka/`.
 
 ## Content editing
