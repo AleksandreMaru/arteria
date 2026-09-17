@@ -46,7 +46,12 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { RESEND_API_KEY, REGISTER_TO_EMAIL, REGISTER_FROM_EMAIL } =
     context.env;
 
-  if (!RESEND_API_KEY || !REGISTER_TO_EMAIL) {
+  const recipients = (REGISTER_TO_EMAIL ?? "")
+    .split(",")
+    .map((addr) => addr.trim())
+    .filter(Boolean);
+
+  if (!RESEND_API_KEY || recipients.length === 0) {
     return json(
       {
         error:
@@ -122,7 +127,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     },
     body: JSON.stringify({
       from,
-      to: [REGISTER_TO_EMAIL],
+      to: recipients,
       reply_to: email,
       subject,
       text,

@@ -1,0 +1,112 @@
+---
+import PageLayout from "../../components/layout/PageLayout.astro";
+import CategoryTag from "../../components/ui/CategoryTag.astro";
+import FormCTA from "../../components/ui/FormCTA.astro";
+import { getSundaySchool } from "../../lib/content";
+import { getLocalized, getUi } from "../../lib/i18n";
+import { isLocale, localeStaticPaths } from "../../lib/routes";
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const { locale: localeParam } = Astro.params;
+if (!localeParam || !isLocale(localeParam)) {
+  return Astro.redirect("/ka/sunday-school");
+}
+const locale = localeParam;
+const ui = getUi(locale);
+const school = getSundaySchool();
+const currentPath = Astro.url.pathname;
+const price = ui.sundaySchool.pricePerMonth.replace(
+  "{amount}",
+  String(school.priceMonthly),
+);
+---
+
+<PageLayout
+  locale={locale}
+  title={ui.sundaySchool.title}
+  description={getLocalized(school.intro, locale)}
+  currentPath={currentPath}
+  ogImage={school.heroImage}
+  registerCourseSlug="sunday-school"
+>
+  <section class="border-b border-border pb-12 md:pb-16">
+    <CategoryTag locale={locale} label={ui.sundaySchool.aboutLabel} />
+    <h1
+      class="mt-4 max-w-4xl font-headline text-3xl font-semibold tracking-tight md:text-5xl md:leading-[1.15]"
+    >
+      {getLocalized(school.headline, locale)}
+    </h1>
+    <p class="mt-6 max-w-3xl text-base leading-relaxed text-muted md:text-lg">
+      {getLocalized(school.intro, locale)}
+    </p>
+  </section>
+
+  {
+    school.heroImage && (
+      <div class="mt-10 aspect-[21/9] overflow-hidden bg-bg-subtle">
+        <img src={school.heroImage} alt="" class="h-full w-full object-cover" />
+      </div>
+    )
+  }
+
+  <dl class="mt-10 grid gap-6 border-y border-border py-8 sm:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <dt class="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+        {ui.sundaySchool.ages}
+      </dt>
+      <dd class="mt-2 font-headline text-xl">
+        {getLocalized(school.ages, locale)}
+      </dd>
+    </div>
+    <div>
+      <dt class="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+        {ui.sundaySchool.duration}
+      </dt>
+      <dd class="mt-2 font-headline text-xl">
+        {getLocalized(school.duration, locale)}
+      </dd>
+    </div>
+    <div>
+      <dt class="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+        {ui.sundaySchool.schedule}
+      </dt>
+      <dd class="mt-2 font-headline text-lg leading-snug">
+        {getLocalized(school.schedule, locale)}
+      </dd>
+    </div>
+    <div>
+      <dt class="text-xs font-semibold uppercase tracking-[0.12em] text-muted">
+        {ui.sundaySchool.price}
+      </dt>
+      <dd class="mt-2 font-headline text-xl">{price}</dd>
+    </div>
+  </dl>
+
+  <section class="mt-12">
+    <h2 class="font-headline text-2xl font-semibold">
+      {ui.sundaySchool.activitiesTitle}
+    </h2>
+    <ul class="mt-6 max-w-2xl space-y-3">
+      {
+        school.activities.map((item) => (
+          <li class="flex gap-3 text-base leading-relaxed text-muted">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+            <span>{getLocalized(item, locale)}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <p class="mt-8 max-w-2xl border-l-2 border-accent pl-5 text-sm leading-relaxed text-muted md:text-base">
+      {getLocalized(school.note, locale)}
+    </p>
+  </section>
+
+  <FormCTA
+    locale={locale}
+    courseSlug="sunday-school"
+    label={ui.sundaySchool.apply}
+  />
+</PageLayout>

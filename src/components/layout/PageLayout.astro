@@ -22,7 +22,7 @@ const {
   title,
   description,
   currentPath,
-  ogImage = "/logo.svg",
+  ogImage = "/logo.png",
   registerCourseSlug = "",
 } = Astro.props;
 
@@ -36,6 +36,10 @@ const courseOptions = [
     slug: course.slug,
     title: getLocalized(course.title, locale),
   })),
+  {
+    slug: "sunday-school",
+    title: ui.register.sundaySchoolOption,
+  },
   {
     slug: "summer-school",
     title: ui.register.summerSchoolOption,
@@ -51,7 +55,7 @@ const registerLabels = ui.register;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={metaDescription} />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="icon" type="image/png" href="/logo.png" />
     <link rel="alternate" hreflang="ka" href={alternates.ka} />
     <link rel="alternate" hreflang="en" href={alternates.en} />
     <link rel="alternate" hreflang="x-default" href={alternates.ka} />

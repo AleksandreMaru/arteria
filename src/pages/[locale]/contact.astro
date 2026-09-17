@@ -2,7 +2,7 @@
 import PageLayout from "../../components/layout/PageLayout.astro";
 import SectionHeader from "../../components/ui/SectionHeader.astro";
 import Button from "../../components/ui/Button.astro";
-import { getCourses, getSummerSchool, getTours } from "../../lib/content";
+import { getCourses, getSundaySchool, getSummerSchool, getTours } from "../../lib/content";
 import { getLocalized, getUi } from "../../lib/i18n";
 import { isLocale, localeStaticPaths } from "../../lib/routes";
 
@@ -17,9 +17,14 @@ if (!localeParam || !isLocale(localeParam)) {
 const locale = localeParam;
 const ui = getUi(locale);
 const currentPath = Astro.url.pathname;
+const sundaySchool = getSundaySchool();
 const summerSchool = getSummerSchool();
 
 const formLinks = [
+  {
+    label: ui.nav.sundaySchool,
+    url: sundaySchool.formUrl,
+  },
   {
     label: ui.nav.summerSchool,
     url: summerSchool.formUrl,

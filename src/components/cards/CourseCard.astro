@@ -12,6 +12,7 @@ interface Props {
 const { locale, course } = Astro.props;
 const ui = getUi(locale);
 const href = localePath(locale, `/courses/${course.slug}`);
+const cardImage = course.cardImage ?? course.heroImage;
 const price = ui.courses.pricePerMonth.replace(
   "{amount}",
   String(course.priceMonthly),
@@ -21,12 +22,12 @@ const price = ui.courses.pricePerMonth.replace(
 <article class="group border border-border bg-white p-5 transition-shadow hover:shadow-sm">
   <a href={href}>
     {
-      course.heroImage && (
+      cardImage && (
         <div class="mb-4 aspect-[16/10] overflow-hidden bg-bg-subtle">
           <img
-            src={course.heroImage}
+            src={cardImage}
             alt=""
-            class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            class="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
             loading="lazy"
           />
         </div>

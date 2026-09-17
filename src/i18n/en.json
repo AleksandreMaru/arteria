@@ -5,6 +5,7 @@
   },
   "nav": {
     "courses": "Courses",
+    "sundaySchool": "Sunday School",
     "summerSchool": "Summer School",
     "tours": "Tours",
     "stories": "Stories",
@@ -89,6 +90,17 @@
     "faq": "FAQ",
     "apply": "Apply"
   },
+  "sundaySchool": {
+    "title": "Sunday School",
+    "aboutLabel": "About the course",
+    "ages": "Age",
+    "duration": "Duration",
+    "schedule": "Schedule",
+    "price": "Price",
+    "pricePerMonth": "{amount} GEL per month",
+    "activitiesTitle": "What do we do together?",
+    "apply": "Register"
+  },
   "tours": {
     "title": "Tours",
     "subtitle": "City and regional walking tours across Georgia.",
@@ -114,7 +126,7 @@
   },
   "about": {
     "title": "About",
-    "subtitle": "A space where knowledge becomes inspiration, culture becomes discovery, and learning becomes experience."
+    "subtitle": "A space where knowledge becomes inspiration, culture becomes discovery, and learning becomes an unforgettable experience."
   },
   "contact": {
     "title": "Contact",
@@ -157,7 +169,8 @@
     "errorEmail": "Enter a valid email.",
     "errorDob": "Use the format DD/MM/YYYY.",
     "errorTerms": "Please agree to the terms and conditions.",
-    "summerSchoolOption": "Summer School"
+    "summerSchoolOption": "Summer School",
+    "sundaySchoolOption": "Sunday School"
   },
   "levels": {
     "beginner": "Beginner",
@@ -211,6 +224,7 @@
     "event": "Event",
     "interview": "Interview",
     "spotlight": "Spotlight",
-    "summerSchool": "Summer School"
+    "summerSchool": "Summer School",
+    "sundaySchool": "Sunday School"
   }
 }

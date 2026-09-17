@@ -1,6 +1,5 @@
 ---
 import PageLayout from "../../components/layout/PageLayout.astro";
-import SectionHeader from "../../components/ui/SectionHeader.astro";
 import { getUi } from "../../lib/i18n";
 import { isLocale, localeStaticPaths } from "../../lib/routes";
 
@@ -16,30 +15,61 @@ const locale = localeParam;
 const ui = getUi(locale);
 const currentPath = Astro.url.pathname;
 
-const body =
+const content =
   locale === "ka"
-    ? [
-        "გამარჯობა,",
-        "ჩვენ ვართ არტარეაედელები და გთავაზობთ სივრცეს სადაც ცოდნა შთაგონებად იქცევა, კულტურა აღმოჩენად და სწავლა გამოცდილებად.",
-        "ჩვენ არ ვყოფთ ადამიანებს წლოვანების მიხედვით. შემეცნებას არ აქვს ასაკი.",
-        "ჩვენ ვქმნით საგანმანათლებლო კურსებს მათთვის, ვისაც აინტერესებს უფრო მეტი, ვიდრე უბრალოდ ფაქტების ცოდნაა.",
-        "ჩვენ გვჯერა, რომ სწავლა შეიძლება იყოს ცნობისმოყვარე, ცოცხალი, ემოციური და შემოქმედებითი.",
-        "ჩვენთან კულტურა საუბრობს, რათა აღმოაჩინო ის, რაც ჯერ არ გინახავს და არ გსმენია.",
-        "არტარეა-ედი აერთიანებს ადამიანებს, იდეებს, ხელოვნებას, ფსიქოლოგიას, კულტურას და ქმნის სივრცეს ახალი ხედვებისთვის, აღმოჩენებისა და განვითარებისთვის.",
-        "რადგან არტარეა-ედი ცოდნის მიღმა აღმოჩენაა, შემოგვიერთდი და აღმოაჩინე მეტი.",
-        "საუკეთესო სურვილებით,",
-      ]
-    : [
-        "Hello,",
-        "We are the ARTAREA ED community, and we offer a space where knowledge becomes inspiration, culture becomes discovery, and learning becomes experience.",
-        "We do not divide people by age. Curiosity has no age.",
-        "We create educational courses for those who want more than simply knowing facts.",
-        "We believe learning can be curious, alive, emotional, and creative.",
-        "With us, culture speaks — so you can discover what you have not yet seen or heard.",
-        "ARTAREA ED brings people, ideas, art, psychology, and culture together, and creates a space for new perspectives, discoveries, and growth.",
-        "Because ARTAREA ED is discovery beyond knowledge — join us and discover more.",
-        "Best wishes,",
-      ];
+    ? {
+        welcome: "მოგესალმებით, ჩვენ ვართ არტარეაედელები!",
+        intro:
+          "ჩვენ ვქმნით სივრცეს, სადაც ცოდნა შთაგონებად იქცევა, კულტურა — აღმოჩენად, ხოლო სწავლა — დაუვიწყარ გამოცდილებად. ჩვენ არ ვყოფთ ადამიანებს წლოვანების მიხედვით, რადგან ღრმად გვწამს, რომ შემეცნებას ასაკი არ აქვს.",
+        philosophyTitle: "ჩვენი ფილოსოფია",
+        philosophyLead:
+          "ჩვენ ვქმნით საგანმანათლებლო კურსებს მათთვის, ვისაც აინტერესებს უფრო მეტი, ვიდრე უბრალოდ ფაქტების ცოდნაა. არტარეა-ედის (Artarea-ed) მიდგომა შემდეგ პრინციპებს ეფუძნება:",
+        principles: [
+          {
+            title: "ცოცხალი პროცესი",
+            body: "ჩვენ გვჯერა, რომ სწავლა შეიძლება იყოს ცნობისმოყვარე, ცოცხალი, ემოციური და შემოქმედებითი.",
+          },
+          {
+            title: "კულტურის ენა",
+            body: "ჩვენთან კულტურა საუბრობს, რათა აღმოაჩინოთ ის, რაც ჯერ არ გინახავთ და არ გსმენიათ.",
+          },
+          {
+            title: "მრავალფეროვნების სინთეზი",
+            body: "ვაერთიანებთ ადამიანებს, იდეებს, ხელოვნებას, ფსიქოლოგიასა და კულტურას.",
+          },
+        ],
+        goalTitle: "ჩვენი მიზანი",
+        goal:
+          "ჩვენი მთავარი მიზანია შევქმნათ თავისუფალი სივრცე ახალი ხედვებისთვის, მუდმივი აღმოჩენებისა და განვითარებისთვის.",
+        closing:
+          "რადგან არტარეა-ედი ცოდნის მიღმა აღმოჩენაა — შემოგვიერთდით და აღმოაჩინეთ მეტი!",
+      }
+    : {
+        welcome: "Welcome — we are the ARTAREA ED community!",
+        intro:
+          "We create a space where knowledge becomes inspiration, culture becomes discovery, and learning becomes an unforgettable experience. We do not divide people by age, because we deeply believe that curiosity has no age.",
+        philosophyTitle: "Our philosophy",
+        philosophyLead:
+          "We create educational courses for those who want more than simply knowing facts. The Artarea-ed approach is built on these principles:",
+        principles: [
+          {
+            title: "A living process",
+            body: "We believe learning can be curious, alive, emotional, and creative.",
+          },
+          {
+            title: "The language of culture",
+            body: "With us, culture speaks — so you can discover what you have not yet seen or heard.",
+          },
+          {
+            title: "A synthesis of diversity",
+            body: "We bring together people, ideas, art, psychology, and culture.",
+          },
+        ],
+        goalTitle: "Our goal",
+        goal: "Our main goal is to create a free space for new perspectives, constant discovery, and growth.",
+        closing:
+          "Because Artarea-ed is discovery beyond knowledge — join us and discover more!",
+      };
 ---
 
 <PageLayout
@@ -48,8 +78,88 @@ const body =
   description={ui.about.subtitle}
   currentPath={currentPath}
 >
-  <SectionHeader title={ui.about.title} subtitle={ui.about.subtitle} />
-  <div class="prose-content max-w-3xl text-base text-muted">
-    {body.map((paragraph) => <p>{paragraph}</p>)}
-  </div>
+  <!-- Intro -->
+  <section class="border-b border-border pb-12 md:pb-16">
+    <p
+      class="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-accent"
+    >
+      {ui.about.title}
+    </p>
+    <h1
+      class="font-headline max-w-4xl text-3xl font-semibold tracking-tight text-black md:text-5xl md:leading-[1.15]"
+    >
+      {content.welcome}
+    </h1>
+    <p
+      class="mt-6 max-w-2xl text-base leading-relaxed text-muted md:text-lg md:leading-relaxed"
+    >
+      {content.intro}
+    </p>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="border-b border-border py-12 md:py-16">
+    <h2 class="font-headline text-2xl font-semibold md:text-3xl">
+      {content.philosophyTitle}
+    </h2>
+    <p class="mt-4 max-w-2xl text-base leading-relaxed text-muted">
+      {content.philosophyLead}
+    </p>
+
+    <div class="mt-10 grid gap-8 md:grid-cols-3 md:gap-10">
+      {
+        content.principles.map((item) => (
+          <div class="border-t-2 border-accent pt-5">
+            <h3 class="font-headline text-xl font-semibold text-black">
+              {item.title}
+            </h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted md:text-base">
+              {item.body}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <!-- Goal + CTA -->
+  <section class="-mx-5 bg-bg-subtle px-5 py-12 md:-mx-8 md:px-8 md:py-16">
+    <div class="max-w-3xl">
+      <h2 class="font-headline text-2xl font-semibold md:text-3xl">
+        {content.goalTitle}
+      </h2>
+      <p class="mt-4 text-base leading-relaxed text-muted md:text-lg">
+        {content.goal}
+      </p>
+      <p
+        class="mt-6 font-headline text-xl font-semibold leading-snug text-black md:text-2xl"
+      >
+        {content.closing}
+      </p>
+      <button
+        type="button"
+        data-open-register
+        class="mt-8 inline-flex min-h-12 items-center justify-center bg-accent px-8 py-3.5 text-base font-medium text-white transition-colors hover:bg-black"
+      >
+        {ui.courses.register}
+      </button>
+    </div>
+  </section>
 </PageLayout>
+
+<script>
+  import { openRegisterModal } from "../../lib/register";
+
+  function bindRegisterButtons() {
+    document.querySelectorAll<HTMLElement>("[data-open-register]").forEach((el) => {
+      if (el.dataset.bound === "1") return;
+      el.dataset.bound = "1";
+      el.addEventListener("click", () => {
+        openRegisterModal(el.dataset.openRegister || undefined);
+      });
+    });
+  }
+
+  bindRegisterButtons();
+  document.addEventListener("astro:page-load", bindRegisterButtons);
+</script>

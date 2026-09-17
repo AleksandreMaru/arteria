@@ -43,7 +43,7 @@ In Cloudflare Pages → **Settings → Environment variables**, add:
 | Name | Value |
 |------|--------|
 | `RESEND_API_KEY` | your Resend API key |
-| `REGISTER_TO_EMAIL` | inbox that should receive leads |
+| `REGISTER_TO_EMAIL` | inbox(es) for leads — comma-separated for several |
 | `REGISTER_FROM_EMAIL` | optional, e.g. `ARTAREA ED <hello@yourdomain.com>` after domain verify |
 
 Until these are set, the form shows a clear “not configured” error.

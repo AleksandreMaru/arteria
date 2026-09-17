@@ -1,9 +1,11 @@
 import {
   courseSchema,
   summerSchoolSchema,
+  sundaySchoolSchema,
   tourSchema,
   type Course,
   type SummerSchool,
+  type SundaySchool,
   type Tour,
 } from "./schemas";
 
@@ -26,6 +28,10 @@ const courseModules = import.meta.glob("../content/courses/*.json", {
 const tourModules = import.meta.glob("../content/tours/*.json", { eager: true });
 
 const summerSchoolModule = import.meta.glob("../content/summer-school.json", {
+  eager: true,
+});
+
+const sundaySchoolModule = import.meta.glob("../content/sunday-school.json", {
   eager: true,
 });
 
@@ -56,4 +62,9 @@ export function getFeaturedTours(): Tour[] {
 export function getSummerSchool(): SummerSchool {
   const mod = Object.values(summerSchoolModule)[0] as { default: unknown };
   return summerSchoolSchema.parse(mod.default);
+}
+
+export function getSundaySchool(): SundaySchool {
+  const mod = Object.values(sundaySchoolModule)[0] as { default: unknown };
+  return sundaySchoolSchema.parse(mod.default);
 }

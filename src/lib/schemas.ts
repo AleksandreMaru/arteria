@@ -60,6 +60,7 @@ export const courseSchema = z.object({
   currency: z.string().default("GEL"),
   curriculum: z.array(curriculumSessionSchema).default([]),
   heroImage: z.string().optional(),
+  cardImage: z.string().optional(),
 });
 
 export const tourSchema = z.object({
@@ -125,6 +126,20 @@ export const summerSchoolSchema = z.object({
   ),
 });
 
+export const sundaySchoolSchema = z.object({
+  formUrl: z.string().url(),
+  heroImage: z.string().optional(),
+  headline: localizedStringSchema,
+  intro: localizedStringSchema,
+  ages: localizedStringSchema,
+  duration: localizedStringSchema,
+  schedule: localizedStringSchema,
+  priceMonthly: z.number(),
+  currency: z.string().default("GEL"),
+  activities: z.array(localizedStringSchema),
+  note: localizedStringSchema,
+});
+
 export const editorialSchema = z.object({
   slug: z.string(),
   author: z.string(),
@@ -140,4 +155,5 @@ export type CurriculumSession = z.infer<typeof curriculumSessionSchema>;
 export type Tour = z.infer<typeof tourSchema>;
 export type Event = z.infer<typeof eventSchema>;
 export type SummerSchool = z.infer<typeof summerSchoolSchema>;
+export type SundaySchool = z.infer<typeof sundaySchoolSchema>;
 export type Editorial = z.infer<typeof editorialSchema>;
