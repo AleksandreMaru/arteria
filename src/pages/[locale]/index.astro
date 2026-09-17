@@ -2,7 +2,7 @@
 import PageLayout from "../../components/layout/PageLayout.astro";
 import Hero from "../../components/home/Hero.astro";
 import TrustStrip from "../../components/home/TrustStrip.astro";
-import SummerSchoolBand from "../../components/home/SummerSchoolBand.astro";
+import KidsProgramsBand from "../../components/home/KidsProgramsBand.astro";
 import CourseCard from "../../components/cards/CourseCard.astro";
 import Button from "../../components/ui/Button.astro";
 import { getFeaturedCourses } from "../../lib/content";
@@ -47,5 +47,5 @@ const currentPath = Astro.url.pathname;
     </div>
   </section>
   <TrustStrip locale={locale} />
-  <SummerSchoolBand locale={locale} />
+  <KidsProgramsBand locale={locale} />
 </PageLayout>

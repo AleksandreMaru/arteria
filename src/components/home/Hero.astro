@@ -13,7 +13,7 @@ const { locale } = Astro.props;
 const ui = getUi(locale);
 const courses = getFeaturedCourses();
 const coursesHref = localePath(locale, "/courses");
-const summerHref = localePath(locale, "/summer-school");
+const sundayHref = localePath(locale, "/sunday-school");
 ---
 
 <section class="grid gap-10 border-b border-border pb-12 md:grid-cols-2 md:items-start md:gap-14 md:pb-16">
@@ -27,8 +27,8 @@ const summerHref = localePath(locale, "/summer-school");
     </p>
     <div class="mt-8 flex flex-wrap gap-4">
       <Button href={coursesHref} size="lg">{ui.home.heroCta}</Button>
-      <Button href={summerHref} variant="secondary" size="lg">
-        {ui.home.heroSecondary}
+      <Button href={sundayHref} variant="secondary" size="lg">
+        {ui.nav.sundaySchool}
       </Button>
     </div>
   </div>
